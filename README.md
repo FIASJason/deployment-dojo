@@ -55,6 +55,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Discusses the pitfalls and solutions that may be encountered during upgrades.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e5/the-problem-with-same-version-upgrades/>
 
+### S1:E6 — The Real Problem with Same Version Upgrades in WiX
+
+- Discusses some solutions for working with same-version upgrades.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e6/the-real-problem-with-same-version-upgrades-in-wix-v4-copy/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
