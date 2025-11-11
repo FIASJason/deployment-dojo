@@ -6,6 +6,17 @@ I created these samples so that I could follow along with the episodes, and have
 
 While Season 1 uses the WiX 4 toolset, my projects were built and compiled using the WiX 6 version.
 
+## Windows Sandbox
+
+When testing MSIs, it's best practice to use a VM or the Windows Sandbox.
+
+Windows Sandbox generates a minimal virtual machine which can be used for testing software installations and other applications. See <https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/> for more information.
+
+> [!WARNING] Windows Sandbox is not available home Home editions of Windows.
+
+- Windows sandbox configuration files are formatted as XML and use the `.wsb` extension.
+- Your computer must have support for Hypervisor enabled. Most machines should support this, however it may need to be enabled in the BIOS.
+
 ## Quick overview
 
 - Series: The Deployment Dojo
