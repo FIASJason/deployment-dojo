@@ -10,4 +10,9 @@
             <SandboxFolder>C:\dojo</SandboxFolder>
         </MappedFolder>
     </MappedFolders>
+    <!-- Run commands after launching the sandbox-->
+    <LogonCommand>
+        <!-- Commands will run in the sandbox and use the local sandbox paths-->
+        <Command>explorer.exe C:\dojo</Command>
+    </LogonCommand>
 </Configuration>
