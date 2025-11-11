@@ -1,0 +1,13 @@
+<Configuration>
+    <!-- Link local folders to the sandbox -->
+    <!-- Multiple folders can be linked-->
+    <MappedFolders>
+        <MappedFolder>
+            <!-- Local folder to be made available in the sandbox -->
+            <!-- Host folders can be relative to the configuration file-->
+            <HostFolder>..\ep2</HostFolder>
+            <!-- Sandbox folder linked to the local folder-->
+            <SandboxFolder>C:\dojo</SandboxFolder>
+        </MappedFolder>
+    </MappedFolders>
+</Configuration>
