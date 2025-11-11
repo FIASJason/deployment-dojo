@@ -4,9 +4,10 @@
     <MappedFolders>
         <MappedFolder>
             <!-- Local folder to be made available in the sandbox -->
-            <!-- Host folders can be relative to the configuration file-->
+            <!-- Host folders can be relative to the configuration file -->
+            <!-- Folder mappings are read/write by default -->
             <HostFolder>..\ep2</HostFolder>
-            <!-- Sandbox folder linked to the local folder-->
+            <!-- Sandbox folder linked to the local folder -->
             <SandboxFolder>C:\dojo</SandboxFolder>
         </MappedFolder>
         <MappedFolder>
@@ -15,11 +16,11 @@
             <SandboxFolder>C:\dojo\tools</SandboxFolder>
         </MappedFolder>
     </MappedFolders>
-    <!-- Run commands after launching the sandbox-->
+    <!-- Run commands after launching the sandbox -->
     <LogonCommand>
-        <!-- Commands will run in the sandbox and use the local sandbox paths-->
+        <!-- Commands will run in the sandbox and use the local sandbox paths -->
         <!-- <Command>explorer.exe C:\dojo</Command> -->
-        <!-- Only one command is supported. To run multiple commands, you'll need a batch file.-->
+        <!-- Only one command is supported. To run multiple commands, you'll need a batch file. -->
         <Command>C:\dojo\tools\dojostart.cmd</Command>
     </LogonCommand>
 </Configuration>
