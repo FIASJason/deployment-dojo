@@ -9,10 +9,17 @@
             <!-- Sandbox folder linked to the local folder-->
             <SandboxFolder>C:\dojo</SandboxFolder>
         </MappedFolder>
+        <MappedFolder>
+            <!-- Current folder to be made available in the sandbox -->
+            <HostFolder>.</HostFolder>
+            <SandboxFolder>C:\dojo\tools</SandboxFolder>
+        </MappedFolder>
     </MappedFolders>
     <!-- Run commands after launching the sandbox-->
     <LogonCommand>
         <!-- Commands will run in the sandbox and use the local sandbox paths-->
-        <Command>explorer.exe C:\dojo</Command>
+        <!-- <Command>explorer.exe C:\dojo</Command> -->
+        <!-- Only one command is supported. To run multiple commands, you'll need a batch file.-->
+        <Command>C:\dojo\tools\dojostart.cmd</Command>
     </LogonCommand>
 </Configuration>
