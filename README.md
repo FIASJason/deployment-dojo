@@ -45,6 +45,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Shows how to create an isolated sandbox environment for safely testing installers and observing installer behaviour without impacting a host system.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e3/building-a-sandbox-in-the-deployment-dojo/>
 
+### S1:E4 — Upgrades and downgrades
+
+- Shows how to install an updated version of your MSI, and what can happen if you don't prevent downgrades.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e4/out-with-the-old-in-with-the-new/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
