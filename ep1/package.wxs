@@ -1,0 +1,20 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Package Manufacturer="Frederick Irwin Anglican School" Name="Kata #1" Version="1.0.0" UpgradeCode="32b5ab00-093a-4336-ba11-da9673654e07">
+        <!-- Specify the location for installed files -->
+        <StandardDirectory Id="ProgramFilesFolder">
+            <Directory Id="INSTALLFOLDER" Name="~Dojo Kata #1" />
+        </StandardDirectory>
+
+        <!-- Define the available features -->
+        <Feature Id="Main">
+            <!-- Define the components to be installed -->
+            <!-- Components must be associated with a feature -->
+            <!-- Components must have a directory -->
+            <Component Id="MainComponent" Directory="INSTALLFOLDER">
+                <!-- The file to be installed in the INSTALLFOLDER directory -->
+                <File Source="a.txt" KeyPath="yes" />
+            </Component>
+        </Feature>
+    </Package>
+
+</Wix>
