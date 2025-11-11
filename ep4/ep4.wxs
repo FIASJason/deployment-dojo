@@ -1,6 +1,6 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-    <Package InstallerVersion="500" Compressed="yes" Name="~ep4" Manufacturer="Frederick Irwin Anglican School" UpgradeCode="37ce3115-3d17-4a87-ad01-4d312d835955" Version="0.9.0.0">
-
+    <Package InstallerVersion="500" Compressed="yes" Name="~ep4" Manufacturer="Frederick Irwin Anglican School" UpgradeCode="37ce3115-3d17-4a87-ad01-4d312d835955" Version="0.9.1.0">
+        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
         <Feature Id="Main" Title="Deployment Dojo Episode 4" Level="1">
             <Component Directory="InstallFolder">
                 <File Source="ep4.txt" KeyPath="yes" />
