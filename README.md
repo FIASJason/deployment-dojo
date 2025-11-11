@@ -17,6 +17,10 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Windows sandbox configuration files are formatted as XML and use the `.wsb` extension.
 - Your computer must have support for Hypervisor enabled. Most machines should support this, however it may need to be enabled in the BIOS.
 
+## Notes on Windows Installer
+
+- MSI only takes the first 3 segments of a version into account. If your MSI has version `1.1.1.0`, and you release version `1.1.1.1`, MSI will happily install the new version and overwrite any files in the old version, but you'll have two listings for your application in the `Add/Remove Programs` applet. Best practice is to update your new release to version `1.1.2.0` instead.
+
 ## Quick overview
 
 - Series: The Deployment Dojo
