@@ -1,0 +1,5 @@
+*.cab
+*.msi
+*.wixpdb
+install.txt
+uninstall.txt
