@@ -1,0 +1,23 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Package Manufacturer="Frederick Irwin Anglican School" Name="Kata #2" Version="1.0.0" UpgradeCode="d4f5cb10-123a-4567-ba11-da9673654e08">
+        <!-- Specify the location for installed files -->
+        <StandardDirectory Id="ProgramFilesFolder">
+            <Directory Id="INSTALLFOLDER" Name="~Dojo Kata #2">
+                <!-- Define the components to be installed -->
+                <!-- Components are linked to a specific directory,not a feature -->
+                <!-- Components in Directories must be referenced in a Feature -->
+                <!-- Use ComponentRef to reference components in a Feature -->
+                <Component Id="MainComponent">
+                    <File Source="ep2.txt" KeyPath="yes" />
+                </Component>
+            </Directory>
+        </StandardDirectory>
+
+        <!-- Define the available features -->
+        <Feature Id="Main">
+            <!-- Define the components to be installed -->
+            <!-- Reference the components in the feature -->
+            <ComponentRef Id="MainComponent" />
+        </Feature>
+    </Package>
+</Wix>
