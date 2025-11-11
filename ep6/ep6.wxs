@@ -1,5 +1,5 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-    <Package Version="1.0.0.0" Manufacturer="Frederick Irwin Anglican School" UpgradeCode="fcb0d159-307a-458f-9747-be60ba3b5140" Name="~Dojo Ep6">
+    <Package Version="1.0.0.1" Manufacturer="Frederick Irwin Anglican School" UpgradeCode="fcb0d159-307a-458f-9747-be60ba3b5140" Name="~Dojo Ep6">
         <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." AllowSameVersionUpgrades="yes"/>
         <StandardDirectory Id="ProgramFilesFolder">
             <Directory Name="~ep6" Id="InstallFolder"/>
