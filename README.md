@@ -50,6 +50,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Shows how to install an updated version of your MSI, and what can happen if you don't prevent downgrades.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e4/out-with-the-old-in-with-the-new/>
 
+### S1:E5 — The problem with Same Version Upgrades
+
+- Discusses the pitfalls and solutions that may be encountered during upgrades.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e5/the-problem-with-same-version-upgrades/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
