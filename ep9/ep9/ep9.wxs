@@ -1,0 +1,9 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Package Version="1.0.0.0" Manufacturer="Frederick Irwin Anglican School" UpgradeCode="cd98c802-a41c-47ec-8b3a-dfe9879c8804" Name="~Dojo Ep9">
+        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." AllowSameVersionUpgrades="no"/>
+        <Feature Id="Main">
+            <!-- Reference the ComponentGroup from files.wxs-->
+            <ComponentGroupRef Id="InstallComponents"/>
+        </Feature>
+    </Package>
+</Wix>

@@ -1,0 +1,14 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <!-- Group components together-->
+        <!-- Reference in the Feature to install all components in this group-->
+        <ComponentGroup Id="InstallComponents" Directory="InstallFolder">
+            <Component>
+                <File Source="ep9a.txt" KeyPath="yes" />
+            </Component>
+            <Component>
+                <File Source="ep9b.txt" KeyPath="yes" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

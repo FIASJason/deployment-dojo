@@ -71,6 +71,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Using WiX and `msbuild` (or `dotnet msbuild`) together using `.wixproj` files
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e8/a-perfect-match-wix-and-msbuild/>
 
+### S1:E9 — Let's install something real
+
+- Installing a compiled application from source code
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e9/lets-install-something-real/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
