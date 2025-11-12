@@ -1,16 +1,23 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-    <Package Version="1.0.0.2" Manufacturer="Frederick Irwin Anglican School" UpgradeCode="51f7d5a7-99ab-45f1-9f37-c15baff220c9" Name="~Dojo Ep7">
+    <Package Version="1.1.0.0" Manufacturer="Frederick Irwin Anglican School" UpgradeCode="51f7d5a7-99ab-45f1-9f37-c15baff220c9" Name="~Dojo Ep7">
         <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." AllowSameVersionUpgrades="no"/>
         <StandardDirectory Id="ProgramFilesFolder">
             <Directory Name="~ep7" Id="InstallFolder"/>
         </StandardDirectory>
         <Feature Id="Main">
-            <Component Directory="InstallFolder">
+            <!-- Reference the ComponentGroup below-->
+            <ComponentGroupRef Id="InstallComponents"/>
+        </Feature>
+
+        <!-- Group components together-->
+        <!-- Reference in the Feature to install all components in this group-->
+        <ComponentGroup Id="InstallComponents" Directory="InstallFolder">
+            <Component>
                 <File Source="ep7a.txt" KeyPath="yes" />
             </Component>
-            <Component Directory="InstallFolder">
+            <Component>
                 <File Source="ep7b.txt" KeyPath="yes" />
             </Component>
-        </Feature>
+        </ComponentGroup>
     </Package>
 </Wix>
