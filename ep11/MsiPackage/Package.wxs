@@ -1,5 +1,5 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-  <Package Id="TODO_Manufacturer.MsiPackage" Name="MsiPackage" Manufacturer="TODO Manufacturer" Version="1.0.0.0">
+  <Package Id="FIAS.MsiPackage" Name="MsiPackage" Manufacturer="Frederick Irwin Anglican School" Version="1.0.0.0" UpgradeCode="{02F5A539-A955-4B62-B26D-4914F4CF6594}">
     <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
     <Feature Id="Main">
