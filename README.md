@@ -76,6 +76,18 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Installing a compiled application from source code
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e9/lets-install-something-real/>
 
+### S1:E10 — The path from WiX v3 to WiX v4
+
+- Highlights the differences between WiX v3 and WiX v4
+- Code samples are not included as WiX v3 is deprecated and unlikely to be used any more
+- Use `wix convert filename.wxs` to convert a WiX v3 file to WiX v4.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e10/the-path-from-wix-v3-to-wix-v4/>
+
+### S1:E11 — HeatWave! The New Hotness for WiX v4
+
+- Focuses on using Visual Studio to create installers
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e11/heatwave-the-new-hotness-for-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
