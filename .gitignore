@@ -2,3 +2,7 @@
 *.msi
 *.wixpdb
 *install.txt
+# Ignore all 'bin' and 'obj' directories anywhere in the repo
+bin/
+obj/
+
