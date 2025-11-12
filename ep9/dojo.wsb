@@ -1,11 +1,15 @@
 <Configuration>
     <MappedFolders>
         <MappedFolder>
-            <HostFolder>.</HostFolder>
+            <HostFolder>.\ep9\bin\Debug</HostFolder>
             <SandboxFolder>C:\Dojo</SandboxFolder>
+        </MappedFolder>
+        <MappedFolder>
+            <HostFolder>.\tools</HostFolder>
+            <SandboxFolder>C:\Dojo\tools</SandboxFolder>
         </MappedFolder>
     </MappedFolders>
     <LogonCommand>
-        <Command>C:\Dojo\dojostart.cmd</Command>
+        <Command>C:\Dojo\tools\dojostart.cmd</Command>
     </LogonCommand>
 </Configuration>

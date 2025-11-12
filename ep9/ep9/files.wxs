@@ -4,10 +4,7 @@
         <!-- Reference in the Feature to install all components in this group-->
         <ComponentGroup Id="InstallComponents" Directory="InstallFolder">
             <Component>
-                <File Source="ep9a.txt" KeyPath="yes" />
-            </Component>
-            <Component>
-                <File Source="ep9b.txt" KeyPath="yes" />
+                <File Source="hellodojo.exe" KeyPath="yes" />
             </Component>
         </ComponentGroup>
     </Fragment>
