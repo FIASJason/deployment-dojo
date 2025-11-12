@@ -66,6 +66,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Installing multiple files, using Component Groups
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e7/moving-beyond-upgrades-to-groups-and-files/>
 
+### S1:E8 — Moving beyond Upgrades to Groups and files
+
+- Using WiX and `msbuild` together
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e8/a-perfect-match-wix-and-msbuild/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
