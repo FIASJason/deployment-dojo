@@ -68,7 +68,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 ### S1:E8 — Moving beyond Upgrades to Groups and files
 
-- Using WiX and `msbuild` together
+- Using WiX and `msbuild` (or `dotnet msbuild`) together using `.wixproj` files
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e8/a-perfect-match-wix-and-msbuild/>
 
 ## Full episode list and where to watch
