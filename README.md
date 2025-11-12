@@ -61,6 +61,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Discusses how to prevent older versions from being installed.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e6/the-real-problem-with-same-version-upgrades-in-wix-v4-copy/>
 
+### S1:E7 — Moving beyond Upgrades to Groups and files
+
+- Installing multiple files, using Component Groups
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e7/moving-beyond-upgrades-to-groups-and-files/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
