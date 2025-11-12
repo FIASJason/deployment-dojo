@@ -5,19 +5,8 @@
             <Directory Name="~ep7" Id="InstallFolder"/>
         </StandardDirectory>
         <Feature Id="Main">
-            <!-- Reference the ComponentGroup below-->
+            <!-- Reference the ComponentGroup from files.wxs-->
             <ComponentGroupRef Id="InstallComponents"/>
         </Feature>
-
-        <!-- Group components together-->
-        <!-- Reference in the Feature to install all components in this group-->
-        <ComponentGroup Id="InstallComponents" Directory="InstallFolder">
-            <Component>
-                <File Source="ep7a.txt" KeyPath="yes" />
-            </Component>
-            <Component>
-                <File Source="ep7b.txt" KeyPath="yes" />
-            </Component>
-        </ComponentGroup>
     </Package>
 </Wix>
