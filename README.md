@@ -57,7 +57,8 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 ### S1:E6 — The Real Problem with Same Version Upgrades in WiX
 
-- Discusses some solutions for working with same-version upgrades.
+- Discusses some solutions for working with same-version upgrades, namely the fact that you can install older revisions on top of newer ones.
+- Discusses how to prevent older versions from being installed.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e6/the-real-problem-with-same-version-upgrades-in-wix-v4-copy/>
 
 ## Full episode list and where to watch
