@@ -1,5 +1,5 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-	<Package Id="TODO_Manufacturer.episode12" Name="~episode12" Manufacturer="Deployment Dojo" Version="1.0.0.0">
+	<Package Id="TODO_Manufacturer.episode12" Name="~episode12" Manufacturer="Deployment Dojo" Version="$(Version)">
 		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
 		<Feature Id="Main">
