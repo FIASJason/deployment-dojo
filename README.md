@@ -96,6 +96,15 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Or using wix: `wix build *.wxs *.wxl -d Version=12.0.0.0 -o out\ep12.msi`
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e12/all-the-ways-to-change-variables-and-variables-directories-and-properties/>
 
+### S1:E13 — Last Minute Changes: Directories
+
+- Demonstrates how to specify installation directories at build time and at install time.
+- Build-time directory structure is specified using the `*.wxs` files.
+- Install-time directory structure can be specified using properties passed to `msiexec`, e.g `msiexec /i myapp.msi INSTALLFOLDER="C:\My Custom Folder\"`
+- Variables specified at install time override those specified at build time.
+- Variables specified at install time **must** be in UPPERCASE. Any variables in lowercase will be ignored.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e13/last-minute-changes-directories/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>

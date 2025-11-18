@@ -1,0 +1,15 @@
+<Configuration>
+    <MappedFolders>
+        <MappedFolder>
+            <HostFolder>.\ep13\bin\x86\debug</HostFolder>
+            <SandboxFolder>C:\Dojo</SandboxFolder>
+        </MappedFolder>
+        <MappedFolder>
+            <HostFolder>.\tools</HostFolder>
+            <SandboxFolder>C:\Dojo\tools</SandboxFolder>
+        </MappedFolder>
+    </MappedFolders>
+    <LogonCommand>
+        <Command>C:\Dojo\tools\dojostart.cmd</Command>
+    </LogonCommand>
+</Configuration>
