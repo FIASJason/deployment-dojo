@@ -2,7 +2,7 @@
 	<Fragment>
 		<StandardDirectory Id="ProgramFiles6432Folder">
 			<Directory Id="INSTALLFOLDER" Name="~ep13">
-				<Directory Id="BinFolder" Name="bin" />
+				<Directory Id="BINFOLDER" Name="bin" />
 			</Directory>
 		</StandardDirectory>
 	</Fragment>

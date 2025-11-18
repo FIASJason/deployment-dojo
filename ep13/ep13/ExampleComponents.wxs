@@ -1,7 +1,10 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
 	<Fragment>
-		<ComponentGroup Id="ExampleComponents" Directory="BinFolder">
-			<Component>
+		<ComponentGroup Id="ExampleComponents">
+			<Component Directory="INSTALLFOLDER">
+				<File Source="ExampleComponents.wxs" />
+			</Component>
+			<Component Directory="BINFOLDER">
 				<File Source="consoleapp1.exe" />
 			</Component>
 		</ComponentGroup>
