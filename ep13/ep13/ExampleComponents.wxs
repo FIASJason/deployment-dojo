@@ -7,7 +7,7 @@
 			<Component Directory="BINFOLDER">
 				<File Source="consoleapp1.exe" />
 			</Component>
-			<Component Subdirectory="subdir">
+			<Component Subdirectory="subdir\x86">
 				<File Source="folders.wxs" />
 			</Component>
 		</ComponentGroup>
