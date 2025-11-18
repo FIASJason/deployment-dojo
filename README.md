@@ -88,6 +88,14 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Focuses on using Visual Studio to create installers
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e11/heatwave-the-new-hotness-for-wix-v4/>
 
+### S1:E12 — All the Ways to Change. Variables and Variables. Directories and Properties
+
+- Demonstrates how to define and use variables and properties in WiX installers
+- Set preprocessor variables in the `.wixproj` file or in the properties GUI.
+- Specify properties at the command line: `dotnet bould -p:WixVersion=12.0.0.0 -p:Platform=x86` where `WixVersion` is your preprocessor variable.
+- Or using wix: `wix build *.wxs *.wxl -d Version=12.0.0.0 -o out\ep12.msi`
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e12/all-the-ways-to-change-variables-and-variables-directories-and-properties/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
