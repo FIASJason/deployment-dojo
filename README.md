@@ -102,7 +102,8 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Build-time directory structure is specified using the `*.wxs` files.
 - Install-time directory structure can be specified using properties passed to `msiexec`, e.g `msiexec /i myapp.msi INSTALLFOLDER="C:\My Custom Folder\"`
 - Variables specified at install time override those specified at build time.
-- Variables specified at install time **must** be in UPPERCASE. Any variables in lowercase will be ignored.
+- Variables specified at install time **must** be in UPPERCASE in your installer project (e.g. `<Directory Id="BINFOLDER">`. Any variables in lowercase (e.g. `<Directory Id="BinFolder">`) will be ignored.
+- Variables specified at install time are not case-sensitive. `BINFOLDER=123` is the same as `binfolder=123` and `BinFolder=123`.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e13/last-minute-changes-directories/>
 
 ## Full episode list and where to watch
