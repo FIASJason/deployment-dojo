@@ -105,6 +105,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Variables specified at install time **must** be in UPPERCASE in your installer project (e.g. `<Directory Id="BINFOLDER">`. Any variables in lowercase (e.g. `<Directory Id="BinFolder">`) will be ignored.
 - Variables specified at install time are not case-sensitive. `BINFOLDER=123` is the same as `binfolder=123` and `BinFolder=123`.
 - Components can be installed to subdirectories by specifying a `Subdirectory` attribute on the `Component` element, e.g. `<Component Id="MyComponent" Subdirectory="Subfolder">`.
+- Multiple subdirectory levels can be specified using backslashes, e.g. `Subdirectory="Subfolder\Subsubfolder"`.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e13/last-minute-changes-directories/>
 
 ## Full episode list and where to watch
