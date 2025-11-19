@@ -1,0 +1,16 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <!-- Property can be set during installation. We'll set a default value here -->
+        <!-- Properties are referenced using square brackets: [PROPERTYNAME] -->
+        <!-- Properties don't need to be defined in advance, but it's good practice to do so -->
+        <!-- If this property ID was removed, the installer would still work, but the default value wouldn't be set -->
+        <Property Id="FOO" Value="123" />
+        <ComponentGroup Id="ExampleComponents" Directory="INSTALLFOLDER">
+            <Component>
+                <File Source="ConsoleApp1.exe" />
+                <!-- Set the value of the Registry key to our Property -->
+                <RegistryValue Root="HKLM" Key="Software\~Dojo" Name="Configurable" Value="[FOO]" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

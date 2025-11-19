@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="../ConsoleApp1/ConsoleApp1.csproj" Id="a9f88055-5cfb-4170-9204-ce7d34510d4e" />
+  <Project Path="ep14.wixproj" Type="b7dd6f7e-def8-4e67-b5b7-07ef123db6f0">
+    <Platform Solution="Debug|Any CPU" Project="x86" />
+    <Platform Solution="Release|Any CPU" Project="x64" />
+  </Project>
+</Solution>
