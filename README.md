@@ -116,6 +116,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Default values can be specified using the `Value` attribute on the `<Property>` element, e.g. `<Property Id="FOO" Value="Bar" />`.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e14/last-minute-changes-this-time-properties-in-wix-v4/>
 
+### S1:E15 — What's a WXL?
+
+- Introduces WiX localization files (`.wxl`), which are XML files used to store localized strings for WiX installers.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e15/whats-a-wxl/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
