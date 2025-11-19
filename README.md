@@ -108,6 +108,14 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Multiple subdirectory levels can be specified using backslashes, e.g. `Subdirectory="Subfolder\Subsubfolder"`.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e13/last-minute-changes-directories/>
 
+### S1:E14 — Last Minute Changes. This Time: Properties in WiX v4
+
+- Demonstrates how to specify properties at build time and at install time.
+- Property values are referenced using square brackets: [PROPERTYNAME]
+- Properties don't need to be defined in the WiX source files to be used at install time, but it's good practice to define them using `<Property>` elements.
+- Default values can be specified using the `Value` attribute on the `<Property>` element, e.g. `<Property Id="FOO" Value="Bar" />`.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e14/last-minute-changes-this-time-properties-in-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
