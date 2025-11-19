@@ -119,6 +119,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 ### S1:E15 — What's a WXL?
 
 - Introduces WiX localization files (`.wxl`), which are XML files used to store localized strings for WiX installers.
+- Localized strings are stored in separate `.wxl` files, allowing for easy translation and localization of installer text.
+- Name localization files with a language code suffix, e.g. `Strings.en-US.wxl` for US English.
+- Id attributes must match across localisation files; only the Value attribute changes.
+- Specify localization variables in a `.wxl` file using the `<String>` element, e.g. `<String Id="WelcomeMessage">Welcome to the Setup Wizard</String>`.
+- Reference localized strings using `!(loc.VariableName)`, e.g. `<Property Id="WELCOME_MSG" Value="!(loc.WelcomeMessage)" />`.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e15/whats-a-wxl/>
 
 ## Full episode list and where to watch
