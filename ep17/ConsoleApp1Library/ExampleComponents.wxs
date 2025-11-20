@@ -5,7 +5,7 @@
                 <File Source="Consoleapp1.exe" />
             </Component>
             <Component>
-                <RegistryValue Root="HKLM" Key="Software\Dojo" Type="string" Name="Type" Value="Community"
+                <RegistryValue Root="HKLM" Key="Software\Dojo" Type="string" Name="Type" Value="[DojoType]"
                                KeyPath="yes" />
             </Component>
         </ComponentGroup>

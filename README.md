@@ -140,7 +140,16 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 - Demonstrates the use of bind variables in WiX v4, which allow for dynamic values to be bound at build time.
 - We'll create two installers, both of which use the same Wix Library.
-- The installers will set a registry key to a different value, depending on the bind variable.
+- The installers will set a registry key to a different value, depending on the bind variable
+- The Wix Library uses a property variable to set a registry key value using the tag `<RegistryValue Value="[DojoType]" />`.
+- The `DojoType` property is set in each installer project using a property tag in the `Package.wxs` file:
+  ```xml
+  <Property Id="DojoType" Value="Community" />
+  ```
+  ```xml
+  <Property Id="DojoType" Value="Enterprise" />
+  ```
+- If the properties are not set in the installer project, the variable is not set, and the default value will be used.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e17/the-latest-wix-build-variables-bind-variables/>
 ## Full episode list and where to watch
 

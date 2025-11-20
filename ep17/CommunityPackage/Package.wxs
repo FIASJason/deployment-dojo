@@ -2,6 +2,8 @@
     <Package Id="TODO_Manufacturer.CommunityPackage" Name="~CommunityPackage" Manufacturer="Dojo" Version="1.0.0.0">
         <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
+        <!-- Set a property, used in the WixLib -->
+        <Property Id="DojoType" Value="Community" />
         <Feature Id="Main">
             <ComponentGroupRef Id="ExampleComponents" />
         </Feature>
