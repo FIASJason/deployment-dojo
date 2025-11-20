@@ -135,6 +135,13 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
   ```
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e16/let-us-revisit-libraries-in-wix-v4---our-first-introduction-was-too-short/>
 
+
+### S1:E17 — The Latest WiX Build Variables: Bind Variables
+
+- Demonstrates the use of bind variables in WiX v4, which allow for dynamic values to be bound at build time.
+- We'll create two installers, both of which use the same Wix Library.
+- The installers will set a registry key to a different value, depending on the bind variable.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e17/the-latest-wix-build-variables-bind-variables/>
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>

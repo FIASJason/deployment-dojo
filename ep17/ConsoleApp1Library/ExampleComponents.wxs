@@ -1,0 +1,13 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <ComponentGroup Id="ExampleComponents" Directory="INSTALLFOLDER">
+            <Component>
+                <File Source="Consoleapp1.exe" />
+            </Component>
+            <Component>
+                <RegistryValue Root="HKLM" Key="Software\Dojo" Type="string" Name="Type" Value="Community"
+                               KeyPath="yes" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
