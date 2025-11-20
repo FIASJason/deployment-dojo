@@ -163,6 +163,10 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
   ```
       Error WIX0197: The bind variable !(wix.DojoType) is unknown. Please ensure the variable is declared on the command line for wix.exe, via a WixVariable element, or inline using the syntax !(wix.DojoType=some value which doesn't contain parentheses).
   ```
+- Default values can be specified when referencing the bound variable, e.g.:
+  ```xml
+  <RegistryValue Value="!(wix.DojoType=DefaultValue)" />
+  ```
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e17/the-latest-wix-build-variables-bind-variables/>
 ## Full episode list and where to watch
 
