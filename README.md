@@ -126,6 +126,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Reference localized strings using `!(loc.VariableName)`, e.g. `<Property Id="WELCOME_MSG" Value="!(loc.WelcomeMessage)" />`.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e15/whats-a-wxl/>
 
+### S1:E116 Let us revisit libraries in WiX v4 - Our first introduction was too short
+
+- Explores the concept of libraries in WiX v4, providing a deeper understanding of how to create and use libraries for reusable installer components.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e16/let-us-revisit-libraries-in-wix-v4---our-first-introduction-was-too-short/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
