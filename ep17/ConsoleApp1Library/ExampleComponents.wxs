@@ -5,7 +5,9 @@
                 <File Source="Consoleapp1.exe" />
             </Component>
             <Component>
-                <RegistryValue Root="HKLM" Key="Software\Dojo" Type="string" Name="Type" Value="[DojoType]"
+                <!-- Variable can also be referenced by [DojoType] -->
+                <!-- Using the bind syntax !() will force the variables to be defined at build time. -->
+                <RegistryValue Root="HKLM" Key="Software\Dojo" Type="string" Name="Type" Value="!(wix.DojoType)"
                                KeyPath="yes" />
             </Component>
         </ComponentGroup>

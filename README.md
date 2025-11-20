@@ -150,6 +150,19 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
   <Property Id="DojoType" Value="Enterprise" />
   ```
 - If the properties are not set in the installer project, the variable is not set, and the default value will be used.
+- If the variable needs to be defined, use Binding properties.
+- Use `<WixVariable>` to define bind variables in the `.wxs` file, e.g.:
+  ```xml
+  <WixVariable Id="DojoType" Value="Community" />
+  ```
+  Reference the bind variable in the library using the syntax `!(wix.DojoType)`, e.g.:
+  ```xml
+  <RegistryValue Value="!(wix.DojoType)" />
+  ```
+- If bound properties are not specified, the build will fail with an error indicating that the bind variable is not set.
+  ```
+      Error WIX0197: The bind variable !(wix.DojoType) is unknown. Please ensure the variable is declared on the command line for wix.exe, via a WixVariable element, or inline using the syntax !(wix.DojoType=some value which doesn't contain parentheses).
+  ```
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e17/the-latest-wix-build-variables-bind-variables/>
 ## Full episode list and where to watch
 

@@ -3,7 +3,8 @@
         <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
         <!-- Set a property, used in the WixLib -->
-        <Property Id="DojoType" Value="Community" />
+        <!-- Comment this line to see what happens when the variable is not defined and binding variables !() are used -->
+        <WixVariable Id="DojoType" Value="Community" />
         <Feature Id="Main">
             <ComponentGroupRef Id="ExampleComponents" />
         </Feature>

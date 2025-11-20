@@ -3,7 +3,9 @@
         <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
         <!-- Set a property, used in the WixLib -->
-        <Property Id="DojoType" Value="Enterprise" />
+        <!--<Property Id="DojoType" Value="Enterprise" />-->
+        <!-- When using binding variables we need to use the WixVariable tag -->
+        <WixVariable Id="DojoType" Value="Enterprise" />
         <Feature Id="Main">
             <ComponentGroupRef Id="ExampleComponents" />
         </Feature>
