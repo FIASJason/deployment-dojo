@@ -15,16 +15,16 @@ jobs:
 
         - name: Run build
           shell: cmd
-          run: ./build.cmd
+          run: ./ep19/build.cmd
 
         - name: Save Community Package
           uses: actions/upload-artifact@v4
           with:
             name: community
-            path: ./BeltTest/CommunityPackage/bin/**
+            path: ./ep19/BeltTest/CommunityPackage/bin/**
 
         - name: Save Enterprise Package
           uses: actions/upload-artifact@v4
           with:
             name: enterprise
-            path: ./BeltTest/EnterprisePackage/bin/**
+            path: ./ep19/BeltTest/EnterprisePackage/bin/**
