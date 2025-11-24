@@ -1,0 +1,13 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <!-- Use $(Version) variable to pull version number from the command line. -->
+    <!-- Variables marked with $() are pre-processor variables. -->
+    <!-- These variables need to be specified at build time, or the build will fail. -->
+    <Package Id="TODO_Manufacturer.enterprisePackage" Name="EnterprisePackage" Manufacturer="!(loc.Manufacturer)"
+             Version="$(Version)">
+        <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+        <Feature Id="Main">
+            <ComponentGroupRef Id="Stuff" />
+        </Feature>
+    </Package>
+</Wix>
