@@ -1,0 +1,16 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <ComponentGroup Id="ConsoleAppComponents" Directory="INSTALLFOLDER">
+            <Component>
+                <File Source="ConsoleApp1.exe" />
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Edition" Value="Standard" />
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="customer" Value="valued" />
+
+                <!-- Create an Environment variable-->
+                <!-- Action = 'set' (we don't want to remove or replace) -->
+                <!-- Part = 'last' (append to the end) -->
+                <Environment Name="PATH" System="yes" Value="[INSTALLFOLDER]" Action="set" Part="last" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

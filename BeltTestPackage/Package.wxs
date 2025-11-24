@@ -1,0 +1,10 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Package Id="DeploymentDojo.BeltTestPackage" Name="Belt Test" Manufacturer="Deployment Dojo"
+             Version="$(Version)">
+        <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+        <Feature Id="Main">
+            <ComponentGroupRef Id="ConsoleAppComponents" />
+        </Feature>
+    </Package>
+</Wix>

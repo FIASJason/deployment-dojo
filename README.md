@@ -197,6 +197,14 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Introduces using branches to manage code changes and creating pull requests to merge the branch back into the main branch.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e20/the-new-dojo-development-flow-wix-toolset-github/>
 
+## S1E21: Enhancing the Environment with WiX v4
+
+- Moving forward, episodes will be linked to a branch and update the BuildTest project.
+- Version numbers of installers will be updated to match the episode number.
+- Demonstrates how to set and update Environment Variables using WiX v4.
+- Updates the `PATH` variable to include the install folder.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e21/enhancing-the-environment-with-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
