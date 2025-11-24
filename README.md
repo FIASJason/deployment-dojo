@@ -173,6 +173,8 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Links everything we've learned in the last 17 episodes into one project.
 - We start with a console app that we want to install using an MSI.
 - Our build team has provided a `.cmd` file to build the application and specify the version.
+- Create a WiX Library project to build and install the ConsoleApp1 application and associated registry keys.
+- Create a WiX Installer project to build the MSI using the WiX Library (Community Edition).
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e18/variables-end-to-end---putting-it-all-together-in-wix-v4/>
 
 ## Full episode list and where to watch
