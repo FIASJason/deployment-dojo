@@ -1,6 +1,6 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
     <Package Id="TODO_Manufacturer.BeltTestPackage" Name="~Dojo Belt Test" Manufacturer="Deployment Dojo"
-             Version="1.0.0.0">
+             Version="$(Version)">
         <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
         <Feature Id="Main">
