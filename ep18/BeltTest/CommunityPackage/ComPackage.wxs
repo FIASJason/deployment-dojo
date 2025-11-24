@@ -6,6 +6,9 @@
              Version="$(Version)">
         <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
+        <!-- Specify the wix variables used in the ConsoleApp1 library -->
+        <WixVariable Id="Edition" Value="Community" />
+
         <Feature Id="Main">
             <ComponentGroupRef Id="Stuff" />
         </Feature>
