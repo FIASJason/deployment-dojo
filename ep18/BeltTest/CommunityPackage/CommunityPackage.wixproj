@@ -1,4 +1,9 @@
 ﻿<Project Sdk="WixToolset.Sdk/6.0.2">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+      <!-- Get the version number from the command line -->
+      <BuildVersion>0</BuildVersion>
+    <DefineConstants>Version=$(BuildVersion)</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConsoleAppLibrary\ConsoleAppLibrary.wixproj" />
   </ItemGroup>
