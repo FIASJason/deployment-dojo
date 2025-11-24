@@ -176,6 +176,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Create a WiX Library project to build and install the ConsoleApp1 application and associated registry keys.
 - Create a WiX Installer project to build the MSI using the WiX Library (Community Edition).
 - Set the Version number using a preprocessor variable passed from the command line.
+- Add localisation support (English US, Danish).
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e18/variables-end-to-end---putting-it-all-together-in-wix-v4/>
 
 ## Full episode list and where to watch
