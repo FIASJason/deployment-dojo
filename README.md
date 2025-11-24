@@ -195,6 +195,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 - Demonstrates more advanced GitHub methods for working with repositories.
 - Introduces using branches to manage code changes and creating pull requests to merge the branch back into the main branch.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e20/the-new-dojo-development-flow-wix-toolset-github/>
 
 ## Full episode list and where to watch
 
