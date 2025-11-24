@@ -1,7 +1,7 @@
 <Configuration>
     <MappedFolders>
         <MappedFolder>
-            <HostFolder>.\BeltTestPackage\bin\x86</HostFolder>
+            <HostFolder>.\BeltTestPackage\bin</HostFolder>
             <SandboxFolder>C:\Dojo</SandboxFolder>
         </MappedFolder>
             <MappedFolder>
