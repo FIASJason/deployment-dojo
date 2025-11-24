@@ -1,5 +1,10 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
     <Fragment>
+        <!-- We can define default properties for all versions here if we wish -->
+        <!--<Property Id="CUSTOMER" Value="Default Customer" />-->
+        <!-- Or you could use binding variables from the edition installer code to set different default values per edition -->
+        <!--<Property Id="CUSTOMER" Value="!(bind.Property.Manufacturer)" />-->
+
         <ComponentGroup Id="Stuff" Directory="INSTALLFOLDER">
             <Component>
                 <File Source="ConsoleApp1.exe" />
