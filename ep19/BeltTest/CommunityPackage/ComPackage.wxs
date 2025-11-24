@@ -1,0 +1,19 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <!-- Use $(Version) variable to pull version number from the command line. -->
+    <!-- Variables marked with $() are pre-processor variables. -->
+    <!-- These variables need to be specified at build time, or the build will fail. -->
+    <Package Id="TODO_Manufacturer.CommunityPackage" Name="CommunityPackage" Manufacturer="!(loc.Manufacturer)"
+             Version="$(Version)">
+        <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+        <!-- Specify the wix variables used in the ConsoleApp1 library -->
+        <WixVariable Id="Edition" Value="Community" />
+
+        <!-- Specify a default value for the CUSTOMER property; this will be used if the property is not set at install time -->
+        <Property Id="CUSTOMER" Value="some" />
+
+        <Feature Id="Main">
+            <ComponentGroupRef Id="Stuff" />
+        </Feature>
+    </Package>
+</Wix>

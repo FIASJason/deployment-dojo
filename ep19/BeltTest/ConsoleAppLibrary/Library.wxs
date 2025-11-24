@@ -1,0 +1,20 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <!-- We can define default properties for all versions here if we wish -->
+        <!--<Property Id="CUSTOMER" Value="Default Customer" />-->
+        <!-- Or you could use binding variables from the edition installer code to set different default values per edition -->
+        <!--<Property Id="CUSTOMER" Value="!(bind.Property.Manufacturer)" />-->
+
+        <ComponentGroup Id="Stuff" Directory="INSTALLFOLDER">
+            <Component>
+                <File Source="ConsoleApp1.exe" />
+                <!-- Use binding variables !(wix.) to specify variables -->
+                <!-- These variables need to be set within the installer -->
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Edition" Value="!(wix.Edition)" />
+                <!-- Specify the Customer name in an Installer variable -->
+                <!-- The value can be specified at the command line (msiexec /i my.msi CUSTOMER="Your Name", or within the GUI of the installer. -->
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="customer" Value="[CUSTOMER]" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

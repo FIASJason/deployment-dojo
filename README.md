@@ -183,6 +183,13 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - When installing via the command line, use `msiexec /i [Edition]Package.msi CUSTOMERNAME="My Customer"` to set the customer name.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e18/variables-end-to-end---putting-it-all-together-in-wix-v4/>
 
+## S1 E19: Introducing GitHub to the Deployment Dojo
+
+- Introduces using GitHub for version control and collaboration in the Deployment Dojo projects.
+- The first section walks the user through creating a free GitHub Organisation and adds a repository for the Deployment Dojo Episode 19 samples.
+- We copy the Episode 18 samples into the new repository, and commit the changes.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e19/introducing-github-to-the-deployment-dojo/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
