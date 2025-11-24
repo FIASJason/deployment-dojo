@@ -3,9 +3,12 @@
         <ComponentGroup Id="Stuff" Directory="INSTALLFOLDER">
             <Component>
                 <File Source="ConsoleApp1.exe" />
-                <!-- TODO: Set the values for these registry keys -->
-                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Edition" Value="" />
-                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="customer" Value="" />
+                <!-- Use binding variables !(wix.) to specify variables -->
+                <!-- These variables need to be set within the installer -->
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Edition" Value="!(wix.Edition)" />
+                <!-- Specify the Customer name in an Installer variable -->
+                <!-- The value can be specified at the command line (msiexec /i my.msi CUSTOMER="Your Name", or within the GUI of the installer. -->
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="customer" Value="[CUSTOMER]" />
             </Component>
         </ComponentGroup>
     </Fragment>

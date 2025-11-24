@@ -178,6 +178,9 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Set the Version number using a preprocessor variable passed from the command line.
 - Add localisation support (English US, Danish).
 - Clone the project for Enterprise Edition, changing only the necessary values (replace `Community` with `Enterprise`).
+- Specify bind variables to set the edition type in the registry.
+- Specify customer variable at install time. Variable must be UPPERCASE in the code, but when specified at the command line the capitalisation does not matter.
+- When installing via the command line, use `msiexec /i [Edition]Package.msi CUSTOMERNAME="My Customer"` to set the customer name.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e18/variables-end-to-end---putting-it-all-together-in-wix-v4/>
 
 ## Full episode list and where to watch
