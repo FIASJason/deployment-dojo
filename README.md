@@ -199,7 +199,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 ## S1E21: Enhancing the Environment with WiX v4
 
-- Moving forward, episodes will be linked to a branch and update the BuildTest project.
+- Moving forward, episodes will be linked to a branch and update the BeltTest project.
 - Version numbers of installers will be updated to match the episode number.
 - Demonstrates how to set and update Environment Variables using WiX v4.
 - Updates the `PATH` variable to include the install folder.
