@@ -191,6 +191,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Set up a GitHub Action by creating the file `.GitHub/workflows/buildl.yml`. This file contains a set of instructions to checkout the code, run the `build.cmd`, and then save the compiled MSI packages as artifacts.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e19/introducing-github-to-the-deployment-dojo/>
 
+## S1E20: The New Dojo Development Flow: WiX Toolset + GitHub
+
+- Demonstrates more advanced GitHub methods for working with repositories.
+- Introduces using branches to manage code changes and creating pull requests to merge the branch back into the main branch.
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
