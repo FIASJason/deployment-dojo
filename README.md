@@ -188,6 +188,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Introduces using GitHub for version control and collaboration in the Deployment Dojo projects.
 - The first section walks the user through creating a free GitHub Organisation and adds a repository for the Deployment Dojo Episode 19 samples.
 - We copy the Episode 18 samples into the new repository, and commit the changes.
+- Set up a GitHub Action by creating the file `.GitHub/workflows/buildl.yml`. This file contains a set of instructions to checkout the code, run the `build.cmd`, and then save the compiled MSI packages as artifacts.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e19/introducing-github-to-the-deployment-dojo/>
 
 ## Full episode list and where to watch
