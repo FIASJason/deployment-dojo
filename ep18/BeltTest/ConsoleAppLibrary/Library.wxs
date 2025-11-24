@@ -1,7 +1,5 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
     <Fragment>
-        <!-- Specify a default value for the CUSTOMER property; this will be used if the property is not set at install time -->
-        <Property Id="CUSTOMER" Value="some" />
         <ComponentGroup Id="Stuff" Directory="INSTALLFOLDER">
             <Component>
                 <File Source="ConsoleApp1.exe" />

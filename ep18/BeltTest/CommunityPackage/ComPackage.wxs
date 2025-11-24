@@ -9,6 +9,9 @@
         <!-- Specify the wix variables used in the ConsoleApp1 library -->
         <WixVariable Id="Edition" Value="Community" />
 
+        <!-- Specify a default value for the CUSTOMER property; this will be used if the property is not set at install time -->
+        <Property Id="CUSTOMER" Value="some" />
+
         <Feature Id="Main">
             <ComponentGroupRef Id="Stuff" />
         </Feature>
