@@ -3,4 +3,4 @@ start appwiz.cpl
 start C:\Dojo
 start "" "C:\Program Files (x86)"
 start regedit.exe
-start powershell.exe
+@REM start powershell.exe
