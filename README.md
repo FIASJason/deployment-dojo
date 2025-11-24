@@ -201,6 +201,8 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 - Moving forward, episodes will be linked to a branch and update the BuildTest project.
 - Version numbers of installers will be updated to match the episode number.
+- Demonstrates how to set and update Environment Variables using WiX v4.
+- Updates the `PATH` variable to include the install folder.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e21/enhancing-the-environment-with-wix-v4/>
 
 ## Full episode list and where to watch
