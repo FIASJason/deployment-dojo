@@ -126,7 +126,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Reference localized strings using `!(loc.VariableName)`, e.g. `<Property Id="WELCOME_MSG" Value="!(loc.WelcomeMessage)" />`.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e15/whats-a-wxl/>
 
-### S1:E116 Let us revisit libraries in WiX v4 - Our first introduction was too short
+### S1:E16 Let us revisit libraries in WiX v4 - Our first introduction was too short
 
 - Explores the concept of libraries in WiX v4, providing a deeper understanding of how to create and use libraries for reusable installer components.
 - Validation of the MSI was disabled in the `.wixproj` file. This can be done by adding the following property inside a `<PropertyGroup>`:
@@ -134,7 +134,6 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
   <DisableMsiValidation>true</DisableMsiValidation>
   ```
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e16/let-us-revisit-libraries-in-wix-v4---our-first-introduction-was-too-short/>
-
 
 ### S1:E17 — The Latest WiX Build Variables: Bind Variables
 
@@ -168,6 +167,14 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
   <RegistryValue Value="!(wix.DojoType=DefaultValue)" />
   ```
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e17/the-latest-wix-build-variables-bind-variables/>
+
+### S1:E18 Variables End to End - Putting it all together in WiX v4
+
+- Links everything we've learned in the last 17 episodes into one project.
+- We start with a console app that we want to install using an MSI.
+- Our build team has provided a `.cmd` file to build the application and specify the version.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e18/variables-end-to-end---putting-it-all-together-in-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
