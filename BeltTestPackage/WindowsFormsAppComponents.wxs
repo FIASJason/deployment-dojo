@@ -13,7 +13,7 @@
             <!-- Create a shortcut on the desktop-->
             <!-- Only create a desktop shortcut if ENABLEDESKTOPSHORTCUT has a value (including 0)-->
             <!-- Referencing targets from another component (such as WindowsFormsApp1 file above) is allowed -->
-            <!-- Wix will generate an ICE69 warning, but this can be safely ignored in this case -->
+            <!-- WiX will generate an ICE69 warning, but this can be safely ignored in this case -->
             <Component Directory="DesktopFolder" Condition="ENABLEDESKTOPSHORTCUT">
                 <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="DesktopFolder"
                           Target="[#WindowsFormsApp1]" Advertise="no"
