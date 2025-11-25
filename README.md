@@ -232,6 +232,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - See [Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/conditional-statement-syntax) and [Examples of Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/examples-of-conditional-statement-syntax) for working with conditions.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e24/to-shortcut-or-not-to-shortcut---that-is-the-question-for-wix-v4/>
 
+## S1E25: At Your Service - Installing Windows Service with WiX v4
+
+- Installs a Windows Service using WiX v4.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e25/at-your-service---installing-windows-service-with-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
