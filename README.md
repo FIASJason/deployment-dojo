@@ -209,6 +209,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 - Creating shortcuts for installed applications using WiX v4.
 - In this episode, we create a new Winforms application to display the Edition and Customer name.
+- We create a desktop shortcut to launch the application after installation.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e22/taking-a-shortcut-using-wix-v4/>
 
 ## Full episode list and where to watch
