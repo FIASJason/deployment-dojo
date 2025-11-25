@@ -13,7 +13,5 @@
                           Icon="dojo.ico" />
             </Component>
         </ComponentGroup>
-
-        <Icon Id="dojo.ico" SourceFile="..\resources\deployment_dojo.ico" />
     </Fragment>
 </Wix>

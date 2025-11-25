@@ -3,6 +3,12 @@
              Version="$(Version)">
         <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
 
+        <!-- Define an Icon property -->
+        <Icon Id="dojo.ico" SourceFile="..\resources\deployment_dojo.ico" />
+
+        <!-- Set Add/Remove Programs icon -->
+        <Property Id="ARPPRODUCTICON" Value="dojo.ico" />
+
         <Feature Id="Main">
             <ComponentGroupRef Id="ConsoleAppComponents" />
             <ComponentGroupRef Id="WindowsFormsAppComponents" />
