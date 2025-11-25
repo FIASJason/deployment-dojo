@@ -229,7 +229,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - When building the MSI, WiX will generate a `ICE69` warning because the file target is not in the same component. This warning can be safely ignored.
 - An alternative method is to use `[INSTALLFOLDERtarget.exe]`. This will expand to the full path of the `target.exe` file in the `INSTALLFOLDER` directory.
 - Use conditional statements to determine whether to create the shortcut based on user input.
-- See [Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/conditional-statement-syntax) and [Examples of Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/conditional-statement-syntax) for working with conditions.
+- See [Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/conditional-statement-syntax) and [Examples of Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/examples-of-conditional-statement-syntax) for working with conditions.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e24/to-shortcut-or-not-to-shortcut---that-is-the-question-for-wix-v4/>
 
 ## Full episode list and where to watch
