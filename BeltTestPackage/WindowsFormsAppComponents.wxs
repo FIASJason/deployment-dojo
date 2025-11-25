@@ -6,9 +6,11 @@
             <Component>
                 <File Source="windowsformsapp1.exe" />
                 <!-- Create a shortcut on the desktop-->
-                <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="DesktopFolder" Advertise="yes" />
+                <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="DesktopFolder" Advertise="yes"
+                          Icon="dojo.ico" />
                 <!-- Create a shortcut on the Start Menu-->
-                <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="ProgramMenuFolder" Advertise="yes" />
+                <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="ProgramMenuFolder" Advertise="yes"
+                          Icon="dojo.ico" />
             </Component>
         </ComponentGroup>
     </Fragment>
