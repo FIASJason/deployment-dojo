@@ -4,13 +4,24 @@
     <Fragment>
         <ComponentGroup Id="WindowsFormsAppComponents" Directory="INSTALLFOLDER">
             <Component>
-                <File Source="windowsformsapp1.exe" />
-                <!-- Create a shortcut on the desktop-->
-                <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="DesktopFolder" Advertise="yes"
-                          Icon="dojo.ico" />
+                <File Id="WindowsFormsApp1" Source="windowsformsapp1.exe" />
                 <!-- Create a shortcut on the Start Menu-->
                 <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="ProgramMenuFolder" Advertise="yes"
                           Icon="dojo.ico" />
+            </Component>
+
+            <!-- Create a shortcut on the desktop-->
+            <!-- Only create a desktop shortcut if ENABLEDESKTOPSHORTCUT has a value (including 0)-->
+            <!-- Referencing targets from another component (such as WindowsFormsApp1 file above) is allowed -->
+            <!-- WiX will generate an ICE69 warning, but this can be safely ignored in this case -->
+            <Component Directory="DesktopFolder" Condition="ENABLEDESKTOPSHORTCUT">
+                <Shortcut Name="Deployment Dojo Windows Forms App 1" Directory="DesktopFolder"
+                          Target="[#WindowsFormsApp1]" Advertise="no"
+                          Icon="dojo.ico" />
+                <!-- Shortcuts are shown on a per-user basis. Even though the application is installed for everyone, the shortcut is only added to the user's profile -->
+                <!-- Add a value to the user's registry to indicate that the desktop shortcut is installed -->
+                <RegistryValue Root="HKCU" Key="Software\BeltTest" Name="DesktopShortcutInstalled" Type="integer"
+                               Value="1" />
             </Component>
         </ComponentGroup>
     </Fragment>

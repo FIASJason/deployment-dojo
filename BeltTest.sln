@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build-goo", "build-goo", "{
 		.github\workflows\build.yml = .github\workflows\build.yml
 		dojo.wsb = dojo.wsb
 		tools\dojostart.cmd = tools\dojostart.cmd
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "BeltTest\ConsoleApp1\ConsoleApp1.csproj", "{D799BBBB-FDC4-4968-AED7-70F8E8D4D6A5}"
@@ -18,9 +19,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{945F7353-6CB7-48FD-92F0-E60CB7D542FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{0BC6FECD-777E-44FE-9B0B-0A28EEC3CF33}"
-	ProjectSection(SolutionItems) = preProject
-		resources\deployment_dojo.ico = resources\deployment_dojo.ico
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
