@@ -205,6 +205,12 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Updates the `PATH` variable to include the install folder.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e21/enhancing-the-environment-with-wix-v4/>
 
+## S1E22: Taking a Shortcut using WiX v4
+
+- Creating shortcuts for installed applications using WiX v4.
+- In this episode, we create a new Winforms application to display the Edition and Customer name.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e22/taking-a-shortcut-using-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
