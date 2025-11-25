@@ -220,7 +220,16 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 ## S1E24: To Shortcut or Not to Shortcut - That is the Question for WiX v4
 
-- Adds the option of creating shortcuts.
+- Adds optional shortcuts.
+- Optional shortcuts can't be advertised, and require additional configuration.
+- `ID`, `Guid`, and `Target` attributes must be specified on the `Shortcut` element.
+- Targets are normally specified using references to `File` elements using the `File` ID as a formatted string.
+- Formatted strings have various acceptable forms; see [Formatted](https://learn.microsoft.com/en-us/windows/win32/msi/formatted) for more information.
+- In this example, we use `[#WindowsFormsApp1]` to reference the file by its File Key. The `#` indicates that this is a file reference, and uses the full path to the file.
+- When building the MSI, WiX will generate a `ICE69` warning because the file target is not in the same component. This warning can be safely ignored.
+- An alternative method is to use `[INSTALLFOLDERtarget.exe]`. This will expand to the full path of the `target.exe` file in the `INSTALLFOLDER` directory.
+- Use conditional statements to determine whether to create the shortcut based on user input.
+- See [Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/conditional-statement-syntax) and [Examples of Conditional Statement Syntax](https://learn.microsoft.com/en-us/windows/win32/msi/conditional-statement-syntax) for working with conditions.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e24/to-shortcut-or-not-to-shortcut---that-is-the-question-for-wix-v4/>
 
 ## Full episode list and where to watch
