@@ -215,6 +215,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 ## S1E23: A less short look into Advertised Shortcuts using WiX v4
 
 - A deeper dive into advertised shortcuts using WiX v4.
+- Add an icon to the project and update the shortcuts.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e23/a-less-short-look-into-advertised-shortcuts-using-wix-v4/>
 
 ## Full episode list and where to watch
