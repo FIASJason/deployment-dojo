@@ -218,6 +218,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Add an icon to the project and update the shortcuts.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e23/a-less-short-look-into-advertised-shortcuts-using-wix-v4/>
 
+## S1E24: To Shortcut or Not to Shortcut - That is the Question for WiX v4
+
+- Adds the option of creating shortcuts.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e24/to-shortcut-or-not-to-shortcut---that-is-the-question-for-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
