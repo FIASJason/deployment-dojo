@@ -261,7 +261,16 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Modifying our installed service to use a lowest-privilege account: `LocalService`.
 - We'll modify the permissions of our install folder to allow the `LocalService` account to read and write files.
 - You can use the `PermissionEx` element with the `Sddl` attribute to set folder permissions.
-    - The SDDL syntax can be exported from a directory with the desired access using `cacls.exe /S [Directory]`.
+    - The SDDL syntax can be exported from a directory with the desired access using one of the following commands:
+    ``` cmd
+    cacls.exe /S [Directory]
+    ```
+
+    or
+
+    ``` powershell
+    (Get-Acl -Path "[Directory]").Sddl
+    ```
     - This method is **not recommended** for production installers, as SDDL strings are not human-readable.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e28/permission-to-come-aboard-using-the-localservice-in-wix-v4/>
 
