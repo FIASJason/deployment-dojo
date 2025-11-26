@@ -12,6 +12,7 @@
         <Feature Id="Main">
             <ComponentGroupRef Id="ConsoleAppComponents" />
             <ComponentGroupRef Id="WindowsFormsAppComponents" />
+            <ComponentGroupRef Id="WindowsServiceComponents" />
         </Feature>
     </Package>
 </Wix>
