@@ -22,7 +22,7 @@
 
                 <CreateFolder>
                     <!-- Specify permissions for our installation folder -->
-                    <!-- Direct permissions -->
+                    <!-- Protected, Auto-Inherit permissions (PAI) -->
                     <!-- Inherit permissions (PAI) -->
                     <!-- Allow (A)-->
                     <!-- Object Inherit the allowance (OI) -->
