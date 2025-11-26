@@ -247,6 +247,14 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Includes a Q&A session with Rob Mensching.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e26/ama---the-wix-v4-rtm-celebration/>
 
+## S1E27: Cleaning up the mess we left with WiX v4
+
+- Removing additional files that were left behind after uninstalling an application.
+- In Episode 25, an additional file was created by the Windows Service application at runtime. When the service was uninstalled, the text file was left behind.
+- We need to remove this file during uninstallation.
+- Any user data (files not created by our application) should not be removed during uninstallation.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e27/cleaning-up-the-mess-we-left-with-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
