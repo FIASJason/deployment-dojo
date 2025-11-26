@@ -23,7 +23,7 @@
                 <CreateFolder>
                     <!-- Specify permissions for our installation folder -->
                     <!-- Protected, Auto-Inherit permissions (PAI) -->
-                    <!-- Inherit permissions (PAI) -->
+                    <!-- Protected DACL with Auto-Inherit enabled (PAI) -->
                     <!-- Allow (A)-->
                     <!-- Object Inherit the allowance (OI) -->
                     <!-- Container Inherit the allowance (CI) -->
