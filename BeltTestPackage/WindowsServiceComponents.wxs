@@ -24,7 +24,7 @@
                 <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFilePath"
                                Value="[DataFolder]data.txt" />
                 <CreateFolder>
-                    <!-- Specify permissions for our installation folder -->
+                    <!-- Specify permissions for our data folder -->
                     <!-- Protected, Auto-Inherit permissions (PAI) -->
                     <!-- Protected DACL with Auto-Inherit enabled (PAI) -->
                     <!-- Allow (A)-->
