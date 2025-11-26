@@ -6,8 +6,14 @@
             <Component>
                 <File Source="WindowsService1.exe" />
                 <!-- Install the service -->
+                <!-- the properties determine how the service is configured-->
                 <ServiceInstall Name="DeploymentDojoCounting" DisplayName="~Deployment Dojo Counting Service"
                                 Type="ownProcess" Start="auto" ErrorControl="normal" />
+                <!-- Determine how the service is controlled during the installation -->
+                <!-- Omitting this element means that your service won't take effect until after the computer reboots-->
+                <!--  (and is then started/stopped depending on the ServiceInstall configuration) -->
+                <!-- Also, when uninstalling, your service won't be removed! -->
+                <!--<ServiceControl Name="DeploymentDojoCounting" Start="install" Stop="both" Remove="uninstall" Wait="yes" />-->
             </Component>
         </ComponentGroup>
     </Fragment>
