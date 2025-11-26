@@ -15,6 +15,9 @@
                 <!--  (and is then started/stopped depending on the ServiceInstall configuration) -->
                 <!-- Also, when uninstalling, your service won't be removed! -->
                 <ServiceControl Name="DeploymentDojoCounting" Start="install" Stop="both" Remove="uninstall" />
+                <!-- WindowsService1.txt was created by the service at runtime.-->
+                <!-- Clean up after ourselves when we uninstall by removing the file. -->
+                <RemoveFile Name="WindowsService1.txt" On="uninstall" />
             </Component>
         </ComponentGroup>
     </Fragment>
