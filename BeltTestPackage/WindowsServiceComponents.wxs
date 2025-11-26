@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <ComponentGroup Id="WindowsServiceComponents" Directory="INSTALLFOLDER">
+            <Component>
+                <File Source="WindowsService1.exe" />
+                <!-- Install the service -->
+                <ServiceInstall Name="DeploymentDojoCounting" DisplayName="~Deployment Dojo Counting Service"
+                                Type="ownProcess" Start="auto" ErrorControl="normal" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

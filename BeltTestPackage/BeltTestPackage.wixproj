@@ -6,5 +6,6 @@
   <ItemGroup>
     <ProjectReference Include="..\BeltTest\ConsoleApp1\ConsoleApp1.csproj" />
     <ProjectReference Include="..\WindowsFormsApp1\WindowsFormsApp1.csproj" />
+    <ProjectReference Include="..\WindowsService1\WindowsService1.csproj" />
   </ItemGroup>
 </Project>
