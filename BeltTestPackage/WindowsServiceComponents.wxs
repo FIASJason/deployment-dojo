@@ -16,10 +16,13 @@
                 <!--  (and is then started/stopped depending on the ServiceInstall configuration) -->
                 <!-- Also, when uninstalling, your service won't be removed! -->
                 <ServiceControl Name="DeploymentDojoCounting" Start="install" Stop="both" Remove="uninstall" />
-                <!-- WindowsService1.txt was created by the service at runtime.-->
-                <!-- Clean up after ourselves when we uninstall by removing the file. -->
-                <RemoveFile Name="WindowsService1.txt" On="uninstall" />
+            </Component>
 
+            <!-- Configure the CountFilePath registry value to point to our Data folder -->
+            <!-- Set the permissions on the Data folder so that the LocalService account can write to it -->
+            <Component Directory="DataFolder">
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFilePath"
+                               Value="[DataFolder]data.txt" />
                 <CreateFolder>
                     <!-- Specify permissions for our installation folder -->
                     <!-- Protected, Auto-Inherit permissions (PAI) -->
@@ -35,6 +38,10 @@
                     <!-- cacls.exe /S [Directory] -->
                     <PermissionEx Sddl="D:PAI(A;OICI;FA;;;LS)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;AU)" />
                 </CreateFolder>
+
+                <!-- data.txt was created by the service at runtime.-->
+                <!-- Clean up after ourselves when we uninstall by removing the file. -->
+                <RemoveFile Name="data.txt" On="uninstall" />
             </Component>
         </ComponentGroup>
     </Fragment>
