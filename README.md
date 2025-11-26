@@ -241,6 +241,12 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
     - `ServiceControl` to define how the service is started and stopped during installation and uninstallation.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e25/at-your-service---installing-windows-service-with-wix-v4/>
 
+## S1E26: AMA - The WiX v4 RTM Celebration
+
+- Celebrating the RTM release of WiX v4.
+- Includes a Q&A session with Rob Mensching.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e26/ama---the-wix-v4-rtm-celebration/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
