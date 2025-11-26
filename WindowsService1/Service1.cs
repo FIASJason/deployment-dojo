@@ -48,7 +48,7 @@ namespace WindowsService1
                 _path = Path.Combine(AppContext.BaseDirectory, "WindowsService1.txt");
             }
 
-            Directory.CreateDirectory(Path.GetDirectoryName(_path) ?? @"C:\WindowsService1.txt");
+            Directory.CreateDirectory(Path.GetDirectoryName(_path) ?? Path.GetTempPath());
         }
 
         void OnTimer(object sender, ElapsedEventArgs e) => UpdateFile($"Running count: {++_count:000}");
