@@ -4,7 +4,7 @@ This repository includes customised sample projects from the [Deployment Dojo](h
 
 I created these samples so that I could follow along with the episodes, and have something to refer back to and see how the installer progresses with each episode.
 
-While Season 1 uses the WiX 4 toolset, my projects were built and compiled using the WiX 6 version.
+While Season 1 uses the WiX 4 toolset, my projects were built and compiled using the WiX 6 toolset.
 
 ## Windows Sandbox
 
@@ -235,6 +235,10 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 ## S1E25: At Your Service - Installing Windows Service with WiX v4
 
 - Installs a Windows Service using WiX v4.
+- Service installation requires three elements:
+    - `File` to install the service executable
+    - `ServiceInstall` to define the service properties
+    - `ServiceControl` to define how the service is started and stopped during installation and uninstallation.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e25/at-your-service---installing-windows-service-with-wix-v4/>
 
 ## Full episode list and where to watch
