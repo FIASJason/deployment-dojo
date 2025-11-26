@@ -265,6 +265,14 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
     - This method is **not recommended** for production installers, as SDDL strings are not human-readable.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e28/permission-to-come-aboard-using-the-localservice-in-wix-v4/>
 
+## S1E29: Narrowing the Permission for our LocalService in WiX v4
+
+- Our service has a limited set of permissions, but still has access to the installation folder.
+- We'll move the data file to a separate folder for increased security.
+- We also need to update the permissions to allow the `LocalService` account to read and write to the new data folder.
+- The location and filename of the data file is specified in the installer and saved to a registry key.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e29/narrowing-the-permission-for-our-localservice-in-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
