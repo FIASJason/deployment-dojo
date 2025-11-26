@@ -9,7 +9,8 @@
                 <!-- the properties determine how the service is configured-->
                 <ServiceInstall Name="DeploymentDojoCounting" DisplayName="~Deployment Dojo Counting Service"
                                 Type="ownProcess" Start="auto" ErrorControl="normal"
-                                Description="Counts the number of deployments" />
+                                Account="NT AUTHORITY\LocalService"
+                                Description="Updates the WindowsService1.txt file with the number of seconds since the service started." />
                 <!-- Determine how the service is controlled during the installation -->
                 <!-- Omitting this element means that your service won't take effect until after the computer reboots-->
                 <!--  (and is then started/stopped depending on the ServiceInstall configuration) -->
@@ -18,6 +19,22 @@
                 <!-- WindowsService1.txt was created by the service at runtime.-->
                 <!-- Clean up after ourselves when we uninstall by removing the file. -->
                 <RemoveFile Name="WindowsService1.txt" On="uninstall" />
+
+                <CreateFolder>
+                    <!-- Specify permissions for our installation folder -->
+                    <!-- Protected, Auto-Inherit permissions (PAI) -->
+                    <!-- Protected DACL with Auto-Inherit enabled (PAI) -->
+                    <!-- Allow (A)-->
+                    <!-- Object Inherit the allowance (OI) -->
+                    <!-- Container Inherit the allowance (CI) -->
+                    <!-- Full Access (FA) or custom access (0x1200a9) -->
+                    <!-- LocalService account (LS)-->
+                    <!-- Builtin Administrators (BA)-->
+                    <!-- Authenticated Users (AU) -->
+                    <!-- The SDDL syntax can be exported from a directory with the desired access using -->
+                    <!-- cacls.exe /S [Directory] -->
+                    <PermissionEx Sddl="D:PAI(A;OICI;FA;;;LS)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;AU)" />
+                </CreateFolder>
             </Component>
         </ComponentGroup>
     </Fragment>
