@@ -9,6 +9,7 @@ namespace WindowsService1
     using System.Text;
     using System.Threading;
     using System.Timers;
+    using ClassLibrary1;
     using Microsoft.Win32;
     using Timer = System.Timers.Timer;
     #endregion
@@ -28,28 +29,8 @@ namespace WindowsService1
             _timer         =  new Timer(1000);
             _timer.Elapsed += OnTimer;
         }
+
         #endregion
-
-        void InitializePath()
-        {
-            try
-            {
-                var path = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "CountFilePath", null) as string;
-
-                _path = Path.GetFullPath(path);
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-
-            if (string.IsNullOrEmpty(_path))
-            {
-                _path = Path.Combine(AppContext.BaseDirectory, "WindowsService1.txt");
-            }
-
-            Directory.CreateDirectory(Path.GetDirectoryName(_path) ?? Path.GetTempPath());
-        }
 
         void OnTimer(object sender, ElapsedEventArgs e) => UpdateFile($"Running count: {++_count:000}");
 
@@ -77,7 +58,7 @@ namespace WindowsService1
 
         protected override void OnStart(string[] args)
         {
-            InitializePath();
+            _path = Class1.GetCountFilePath();
             UpdateFile($"Start count: {_count}");
             _timer.Start();
         }
