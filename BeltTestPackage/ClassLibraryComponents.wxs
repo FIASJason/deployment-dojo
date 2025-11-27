@@ -8,7 +8,7 @@
         </Property>
 
         <!-- Set a property for the customer name -->
-        <Property Id="Customer" Value="valued" />
+        <Property Id="CUSTOMER" Value="valued" />
 
         <!-- Set the DATAFOLDER directory to the remembered value -->
         <!-- Set after AppSearch so that REMEMBERDATAFOLDER is populated -->
@@ -25,7 +25,7 @@
             </Component>
 
             <Component>
-                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Customer" Value="[Customer]" />
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Customer" Value="[CUSTOMER]" />
             </Component>
 
             <!-- Configure the CountFileFolder and CountFilename registry values to point to our Data folder and filename -->
