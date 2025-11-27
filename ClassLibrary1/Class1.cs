@@ -21,8 +21,8 @@ namespace ClassLibrary1
                 return _path;
             }
 
-            var folder   = string.Empty;
-            var filename = string.Empty;
+            var folder   = AppContext.BaseDirectory;
+            var filename = "WindowsService1.txt";
 
             try
             {
