@@ -16,6 +16,15 @@
             <Component>
                 <File Source="ClassLibrary1.dll" />
             </Component>
+
+            <Component>
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Edition" Value="Standard" />
+            </Component>
+
+            <Component>
+                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Customer" Value="valued" />
+            </Component>
+
             <!-- Configure the CountFileFolder and CountFilename registry values to point to our Data folder and filename -->
             <!-- Set the permissions on the Data folder so that the LocalService account can write to it -->
             <Component Directory="DATAFOLDER">
