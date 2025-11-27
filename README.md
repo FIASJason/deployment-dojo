@@ -297,6 +297,25 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - We also split up the path registry key into separate Folder and Filename keys, which will allow us more flexibility when specifying custom data folder locations. This required collaboration with the Dev team as the Class Library needed to be updated to combine the two registry keys into a single path.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e31/when-setup-is-and-is-not-integrated-into-the-development-process/>
 
+## S1E32: Remembering user configuration using WiX v4
+
+- In this episode, we modify the installer to remember the user's custom data folder location during uninstallation and reinstallation.
+- In episode 31, we split the data file path into separate Folder and Filename registry keys. This allows us to easily retrieve the custom folder location during uninstall or reinstall.
+- To do this, we use the `RegistrySearch` element to search for the `DataFolder` registry key during installation. If the key is found, we set the `DATAFOLDER` property to the value of the registry key.
+
+```xml
+        <Property Id="REMEMBERDATAFOLDER">
+            <RegistrySearch Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFileFolder" Type="raw" />
+        </Property>
+
+        <!-- Set the DATAFOLDER directory to the remembered value -->
+        <!-- Set after AppSearch so that REMEMBERDATAFOLDER is populated (search the registry before attempting to set the value) -->
+        <!-- Using the Condition so that we only set it if we found a value -->
+        <SetProperty Id="DATAFOLDER" Value="[REMEMBERDATAFOLDER]" After="AppSearch" Condition="REMEMBERDATAFOLDER" />
+```
+- `Condition` returns true if the property exists and has a value. If the property is `null`, then the condition is false and the action will not be performed. This allows us to use the existing value from the registry if it exists, or to use a custom value specified at install/uninstall time if the value is empty.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e32/remembering-user-configuration-using-wix-v4/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
