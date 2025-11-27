@@ -288,6 +288,10 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - If a custom data folder location is specified during installation, there can be issues removing the file on uninstall, as the file path is set to [INSTALLFOLDER]Data.txt, which may not exist if a custom folder was specified. If you add a `File` element to the component, the uninstall will work as expected. This issue will be resolved in the next episode.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e30/configuring-our-localservice-in-wix-v4/>
 
+## S1E31: When setup IS and is NOT integrated into the development process
+
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e31/when-setup-is-and-is-not-integrated-into-the-development-process/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>

@@ -11,4 +11,4 @@ for /f "usebackq delims=" %%i in (`"%ProgramFiles(x86)%\Microsoft Visual Studio\
 echo Build
 echo Current Directory: %CD%
 
-msbuild -nologo -m .\BeltTest.sln -p:BuildVersion=0.30
+msbuild -nologo -m .\BeltTest.sln -p:BuildVersion=0.31
