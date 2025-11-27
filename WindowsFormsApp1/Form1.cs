@@ -4,7 +4,7 @@ namespace WindowsFormsApp1
 {
     #region Using Directives
     using System.Windows.Forms;
-    using Microsoft.Win32;
+    using ClassLibrary1;
     #endregion
 
     public partial class Form1 : Form
@@ -14,8 +14,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            EditionValue.Text  = Registry.GetValue(@"HKEY_LOCAL_MACHINE\software\BeltTest", "Edition",  "")?.ToString();
-            CustomerValue.Text = Registry.GetValue(@"HKEY_LOCAL_MACHINE\software\BeltTest", "Customer", "")?.ToString();
+            EditionValue.Text  = Class1.GetEdition();
+            CustomerValue.Text = Class1.GetCustomer();
         }
         #endregion
     }
