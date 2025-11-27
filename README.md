@@ -320,7 +320,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 - A deviation from the usual path, this episode focuses on creating MSI installers that are suitable for enterprise deployment scenarios.
 - We refactored our applications to store all registry-related methods (`GetCustomer` and `GetEdition`) in `ClassLibrary1`.
-- The registry keys to store the Edition and Customer name have been moved into `ClassLibraryComponents.wxs`, keeping all registry -related components in one place.
+- The registry keys to store the Edition and Customer name have been moved into `ClassLibraryComponents.wxs`, keeping all registry-related components in one place.
 - Added a new property `CUSTOMER` to store the customer name. The user can specify this value at install time, allowing for the application to be personalised.
 - Transforms (`.mst` files) are created to allow for easy deployment of custom configurations without modifying the base MSI installer.
 - Transforms can be created using the `wix msi transform` command, specifying the base MSI, the output MST file, and the properties to set:
