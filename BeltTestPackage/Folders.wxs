@@ -2,8 +2,8 @@
     <Fragment>
         <StandardDirectory Id="ProgramFiles6432Folder">
             <Directory Id="INSTALLFOLDER" Name="!(bind.Property.Manufacturer) !(bind.Property.ProductName)">
-                <!-- This path cannot be changed by the user, so we'll use mixed case for the ID -->
-                <Directory Id="DataFolder" Name="Data" />
+                <!-- This path can be changed by the user during installation, so we use uppercase for the ID to make it a public property -->
+                <Directory Id="DATAFOLDER" Name="Data" />
             </Directory>
         </StandardDirectory>
     </Fragment>

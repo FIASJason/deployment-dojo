@@ -20,9 +20,9 @@
 
             <!-- Configure the CountFilePath registry value to point to our Data folder -->
             <!-- Set the permissions on the Data folder so that the LocalService account can write to it -->
-            <Component Directory="DataFolder">
+            <Component Directory="DATAFOLDER">
                 <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFilePath"
-                               Value="[DataFolder]data.txt" />
+                               Value="[DATAFOLDER]data.txt" />
                 <CreateFolder>
                     <!-- Specify permissions for our data folder -->
                     <!-- Protected, Auto-Inherit permissions (PAI) -->
@@ -41,6 +41,8 @@
 
                 <!-- data.txt was created by the service at runtime.-->
                 <!-- Clean up after ourselves when we uninstall by removing the file. -->
+                <!-- WARNING: When uninstalling, the path defaults to [INSTALLFOLDER]\data.txt -->
+                <!-- If you changed the location of data.txt via the registry, the file will be left behind! -->
                 <RemoveFile Name="data.txt" On="uninstall" />
             </Component>
         </ComponentGroup>
