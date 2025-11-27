@@ -341,7 +341,7 @@ msiexec /i .\original.msi TRANSFORMS=.\customers\Contoso.mst
 ```cmd
 msiexec /i belttest.msi TRANSFORMS=belttest.mst
 ```
-As the Company Name/Customer can now be specified using the transform, we can make the `CUSTOMER` property private by changing it to `Customer`. This prevents the user from specifying the customer name at install time - it will be set from the `.mst` transform file.
+- As the Company Name/Customer can now be specified using the transform, we can make the `CUSTOMER` property private by changing it to `Customer`. This prevents the user from specifying the customer name at install time - it will be set from the `.mst` transform file.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e33/configuration-for-the-it-crowd/>
 
 ## Full episode list and where to watch
