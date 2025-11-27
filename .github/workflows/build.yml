@@ -1,4 +1,4 @@
-name: Belt Test Build
+  name: Belt Test Build
 
 on:
     push:
@@ -12,6 +12,9 @@ jobs:
         steps:
         - name: Checkout repository
           uses: actions/checkout@v4
+
+        - name: Restore NuGet packages
+          run: nuget restore BeltTest.sln
 
         - name: Run build
           shell: cmd
