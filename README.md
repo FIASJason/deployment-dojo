@@ -292,7 +292,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 ## S1E31: When setup IS and is NOT integrated into the development process
 
 - In this episode, we pretend to be a multi-team dev shop with a Dev team and a Setup team.
-- The Dev team has modified the applications and added a new project. however, the new class library was not included in the WiX project. This broke the installer as the applications are missing required files.
+- The Dev team has modified the applications and added a new project. However, the new class library was not included in the WiX project. This broke the installer as the applications are missing required files.
 - We added a new component to add the `ClassLibrary1.dll` file to the installer. This allows the installer to install and run the service correctly.
 - We also split up the path registry key into separate Folder and Filename keys, which will allow us more flexibility when specifying custom data folder locations. This required collaboration with the Dev team as the Class Library needed to be updated to combine the two registry keys into a single path.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e31/when-setup-is-and-is-not-integrated-into-the-development-process/>
