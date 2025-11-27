@@ -3,8 +3,6 @@
         <ComponentGroup Id="ConsoleAppComponents" Directory="INSTALLFOLDER">
             <Component>
                 <File Source="ConsoleApp1.exe" />
-                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Edition" Value="Standard" />
-                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="Customer" Value="valued" />
 
                 <!-- Create an Environment variable-->
                 <!-- Action = 'set' (we don't want to remove or replace) -->

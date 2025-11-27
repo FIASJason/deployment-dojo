@@ -316,6 +316,34 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - `Condition` returns true if the property exists and has a value. If the property is `null`, then the condition is false and the action will not be performed. This allows us to use the existing value from the registry if it exists, or to use a custom value specified at install/uninstall time if the value is empty.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e32/remembering-user-configuration-using-wix-v4/>
 
+## S1E33: Configuration for the IT Crowd
+
+- A deviation from the usual path, this episode focuses on creating MSI installers that are suitable for enterprise deployment scenarios.
+- We refactored our applications to store all registry-related methods (`GetCustomer` and `GetEdition`) in `ClassLibrary1`.
+- The registry keys to store the Edition and Customer name have been moved into `ClassLibraryComponents.wxs`, keeping all registry-related components in one place.
+- Added a new property `CUSTOMER` to store the customer name. The user can specify this value at install time, allowing for the application to be personalised.
+- Transforms (`.mst` files) are created to allow for easy deployment of custom configurations without modifying the base MSI installer.
+- Transforms can be created using the `wix msi transform` command, specifying the base MSI, the output MST file, and the properties to set:
+```cmd
+# Create the transform
+wix msi transform .\original.msi .\updated.msi -out .\customers\Contoso.mst
+
+# Install the MSI using the transform
+msiexec /i .\original.msi TRANSFORMS=.\customers\Contoso.mst
+```
+- The downside to this approach is that it requires the Setup team to modify the WiX elements with updated variables. It would be better if the IT team could create their own transforms without needing to modify the installer source code.
+- Instead, we'll create a new application to allow the IT team to create their own transforms.
+- We created a new console application `ITConfig` that takes command line arguments for the Customer name, and generates a transform file.
+- Because the application modifies the MSI file directly, we need to add a reference to the `WixToolset.Dtf.WindowsInstaller` NuGet package.
+- Run the command with `itconfig.exe belttest.msi 'Customer Name'`. The transform will be created with the name `belttest.mst`.
+- The IT team can now create their own transforms without needing to modify the installer source code.
+- Install the MSI using the generated transform:
+```cmd
+msiexec /i belttest.msi TRANSFORMS=belttest.mst
+```
+- As the Company Name/Customer can now be specified using the transform, we can make the `CUSTOMER` property private by changing it to `Customer`. This prevents the user from specifying the customer name at install time - it will be set from the `.mst` transform file.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e33/configuration-for-the-it-crowd/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>

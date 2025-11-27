@@ -7,22 +7,21 @@ namespace ConsoleApp1
     using System.IO;
     using System.Threading;
     using ClassLibrary1;
-    using Microsoft.Win32;
     #endregion
 
     internal class Program
     {
-
         static void Main(string[] args)
         {
-            var edition  = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "Edition",  null);
-            var customer = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "Customer", null);
+            // Episode 33: Use Class Library to get Edition and Customer
+            var edition  = Class1.GetEdition();
+            var customer = Class1.GetCustomer();
 
             Console.WriteLine($"Welcome to the {edition} ConsoleApp1.");
             Console.WriteLine($"  Registered to our {customer} customer");
 
             // Episode 25 - Reading from the Service's Output File
-            // Epidose 31 - Merge the methods from the service and console app into a Library
+            // Episode 31 - Merge the methods from the service and console app into a Library
             var path    = Class1.GetCountFilePath();
             var oldText = string.Empty;
 

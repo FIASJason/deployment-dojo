@@ -48,5 +48,9 @@ namespace ClassLibrary1
 
             return _path;
         }
+
+        public static string GetCustomer() => (string) Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "Customer", null) ?? "Default";
+
+        public static string GetEdition() => (string) Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "Edition", null) ?? "Default";
     }
 }
