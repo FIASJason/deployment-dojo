@@ -2,6 +2,16 @@
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
     <Fragment>
+        <!-- Set a property based on an existing registry value -->
+        <Property Id="REMEMBERDATAFOLDER">
+            <RegistrySearch Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFileFolder" Type="raw" />
+        </Property>
+
+        <!-- Set the DATAFOLDER directory to the remembered value -->
+        <!-- Set after AppSearch so that REMEMBERDATAFOLDER is populated -->
+        <!-- Using the Condition so that we only set it if we found a value -->
+        <SetProperty Id="DATAFOLDER" Value="[REMEMBERDATAFOLDER]" After="AppSearch" Condition="REMEMBERDATAFOLDER" />
+
         <ComponentGroup Id="ClassLibraryComponents" Directory="INSTALLFOLDER">
             <Component>
                 <File Source="ClassLibrary1.dll" />
