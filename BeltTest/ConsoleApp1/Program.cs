@@ -6,26 +6,12 @@ namespace ConsoleApp1
     using System;
     using System.IO;
     using System.Threading;
+    using ClassLibrary1;
     using Microsoft.Win32;
     #endregion
 
     internal class Program
     {
-        static string GetCountFilePath()
-        {
-            try
-            {
-                var path = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "CountFilePath", null) as string;
-
-                return Path.GetFullPath(path);
-            }
-            catch
-            {
-                // ignored
-            }
-
-            return Path.Combine(AppContext.BaseDirectory, "WindowsService1.txt");
-        }
 
         static void Main(string[] args)
         {
@@ -36,7 +22,8 @@ namespace ConsoleApp1
             Console.WriteLine($"  Registered to our {customer} customer");
 
             // Episode 25 - Reading from the Service's Output File
-            var path    = GetCountFilePath();
+            // Epidose 31 - Merge the methods from the service and console app into a Library
+            var path    = Class1.GetCountFilePath();
             var oldText = string.Empty;
 
             while (!Console.KeyAvailable)
