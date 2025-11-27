@@ -12,7 +12,8 @@ When testing MSIs, it's best practice to use a VM or the Windows Sandbox.
 
 Windows Sandbox generates a minimal virtual machine which can be used for testing software installations and other applications. See <https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/> for more information.
 
-> [!WARNING] Windows Sandbox is not available home Home editions of Windows.
+> [!WARNING]
+> Windows Sandbox is not available in the Home edition of Windows.
 
 - Windows sandbox configuration files are formatted as XML and use the `.wsb` extension.
 - Your computer must have support for Hypervisor enabled. Most machines should support this, however it may need to be enabled in the BIOS.
@@ -287,6 +288,14 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Allow the user to specify the location of the Data folder during installation.
 - If a custom data folder location is specified during installation, there can be issues removing the file on uninstall, as the file path is set to [INSTALLFOLDER]Data.txt, which may not exist if a custom folder was specified. If you add a `File` element to the component, the uninstall will work as expected. This issue will be resolved in the next episode.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e30/configuring-our-localservice-in-wix-v4/>
+
+## S1E31: When setup IS and is NOT integrated into the development process
+
+- In this episode, we pretend to be a multi-team dev shop with a Dev team and a Setup team.
+- The Dev team has modified the applications and added a new project. However, the new class library was not included in the WiX project. This broke the installer as the applications are missing required files.
+- We added a new component to add the `ClassLibrary1.dll` file to the installer. This allows the installer to install and run the service correctly.
+- We also split up the path registry key into separate Folder and Filename keys, which will allow us more flexibility when specifying custom data folder locations. This required collaboration with the Dev team as the Class Library needed to be updated to combine the two registry keys into a single path.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e31/when-setup-is-and-is-not-integrated-into-the-development-process/>
 
 ## Full episode list and where to watch
 

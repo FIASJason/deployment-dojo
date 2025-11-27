@@ -1,37 +1,52 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// ClassLibrary1
 
 namespace ClassLibrary1
 {
+    #region Using Directives
+    using System;
+    using System.IO;
+    using Microsoft.Win32;
+    #endregion
+
     public class Class1
     {
-        private static string _path;
+        #region Fields
+        static string _path;
+        #endregion
+
         public static string GetCountFilePath()
         {
+            if (!string.IsNullOrWhiteSpace(_path))
+            {
+                return _path;
+            }
+
+            var folder   = string.Empty;
+            var filename = string.Empty;
+
             try
             {
-                var path = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "CountFilePath", null) as string;
-
-                _path = Path.GetFullPath(path);
+                folder = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "CountFileFolder", null) as string ?? AppContext.BaseDirectory;
             }
             catch (Exception)
             {
                 // ignored
             }
 
-            if (string.IsNullOrEmpty(_path))
+            try
             {
-                _path = Path.Combine(AppContext.BaseDirectory, "WindowsService1.txt");
+                filename = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "CountFileName", null) as string ?? "WindowsService1.txt";
+            }
+            catch (Exception)
+            {
+                // ignored
             }
 
-            Directory.CreateDirectory(Path.GetDirectoryName(_path) ?? Path.GetTempPath());
+            folder = Path.GetFullPath(folder);
+            Directory.CreateDirectory(folder);
+            _path = Path.Combine(folder, filename);
+
             return _path;
         }
-
     }
 }
