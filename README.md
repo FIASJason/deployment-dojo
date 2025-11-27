@@ -285,7 +285,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 ## S1E30: Configuring our LocalService in WiX v4
 
 - Allow the user to specify the location of the Data folder during installation.
-- If a custom data folder location is specified during installation, there can be issues removing the file on uninstall, as the file path is set to [INSTALLFOLDER]DataFile.txt, which may not exist if a custom folder was specified.
+- If a custom data folder location is specified during installation, there can be issues removing the file on uninstall, as the file path is set to [INSTALLFOLDER]DataFile.txt, which may not exist if a custom folder was specified. If you add a `File` element to the component, the uninstall will work as expected. This issue will be resolved in the next episode.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e30/configuring-our-localservice-in-wix-v4/>
 
 ## Full episode list and where to watch
