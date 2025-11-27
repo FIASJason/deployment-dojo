@@ -316,6 +316,11 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - `Condition` returns true if the property exists and has a value. If the property is `null`, then the condition is false and the action will not be performed. This allows us to use the existing value from the registry if it exists, or to use a custom value specified at install/uninstall time if the value is empty.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e32/remembering-user-configuration-using-wix-v4/>
 
+## S1E33: Configuration for the IT Crowd
+
+- A deviation from the usual path, this episode focuses on creating MSI installers that are suitable for enterprise deployment scenarios.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e33/configuration-for-the-it-crowd/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>
