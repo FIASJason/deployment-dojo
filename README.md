@@ -322,6 +322,25 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - We refactored our applications to store all registry-related methods (`GetCustomer` and `GetEdition`) in `ClassLibrary1`.
 - The registry keys to store the Edition and Customer name have been moved into `ClassLibraryComponents.wxs`, keeping all registry -related components in one place.
 - Added a new property `CUSTOMER` to store the customer name. The user can specify this value at install time, allowing for the application to be personalised.
+- Transforms (`.mst` files) are created to allow for easy deployment of custom configurations without modifying the base MSI installer.
+- Transforms can be created using the `wix msi transform` command, specifying the base MSI, the output MST file, and the properties to set:
+```cmd
+# Create the transform
+wix msi transform .\original.msi .\updated.msi -out .\customers\Contoso.mst
+
+# Install the MSI using the transform
+msiexec /i .\original.msi TRANSFORMS=.\customers\Contoso.mst
+```
+- The downside to this approach is that it requires the Setup team to modify the WiX elements with updated variables. It would be better if the IT team could create their own transforms without needing to modify the installer source code.
+- Instead, we'll create a new application to allow the IT team to create their own transforms.
+- We created a new console application `ITConfig` that takes command line arguments for the Customer name, and generates a transform file.
+- Because the application modifies the MSI file directly, we need to add a reference to the `WixToolset.Dtf.WindowsInstaller` NuGet package.
+- Run the command with `itconfig.exe belttest.msi 'Customer Name'`. The transform will be created with the name `belttest.mst`.
+- The IT team can now create their own transforms without needing to modify the installer source code.
+- Install the MSI using the generated transform:
+```cmd
+msiexec /i belttest.msi TRANSFORMS=belttest.mst
+```
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e33/configuration-for-the-it-crowd/>
 
 ## Full episode list and where to watch
