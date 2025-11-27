@@ -291,7 +291,9 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 ## S1E31: When setup IS and is NOT integrated into the development process
 
-- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e31/when-setup-is-and-is-not-integrated-into-the-development-process/>
+-  In this episode, we pretend to be a multi-team dev shop with a Dev team and a Setup team.
+- The Dev team has modified the applications and added a new project. however, the new class library was not included in the WiX project. This broke the installer as the applications are missing required files.
+-  Link: <https://robmensching.com/deployment-dojo/episodes/s1/e31/when-setup-is-and-is-not-integrated-into-the-development-process/>
 
 ## Full episode list and where to watch
 
