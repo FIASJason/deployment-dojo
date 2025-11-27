@@ -18,33 +18,6 @@
                 <ServiceControl Name="DeploymentDojoCounting" Start="install" Stop="both" Remove="uninstall" />
             </Component>
 
-            <!-- Configure the CountFilePath registry value to point to our Data folder -->
-            <!-- Set the permissions on the Data folder so that the LocalService account can write to it -->
-            <Component Directory="DATAFOLDER">
-                <RegistryValue Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFilePath"
-                               Value="[DATAFOLDER]data.txt" />
-                <CreateFolder>
-                    <!-- Specify permissions for our data folder -->
-                    <!-- Protected, Auto-Inherit permissions (PAI) -->
-                    <!-- Protected DACL with Auto-Inherit enabled (PAI) -->
-                    <!-- Allow (A)-->
-                    <!-- Object Inherit the allowance (OI) -->
-                    <!-- Container Inherit the allowance (CI) -->
-                    <!-- Full Access (FA) or custom access (0x1200a9) -->
-                    <!-- LocalService account (LS)-->
-                    <!-- Builtin Administrators (BA)-->
-                    <!-- Authenticated Users (AU) -->
-                    <!-- The SDDL syntax can be exported from a directory with the desired access using -->
-                    <!-- cacls.exe /S [Directory] -->
-                    <PermissionEx Sddl="D:PAI(A;OICI;FA;;;LS)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;AU)" />
-                </CreateFolder>
-
-                <!-- data.txt was created by the service at runtime.-->
-                <!-- Clean up after ourselves when we uninstall by removing the file. -->
-                <!-- WARNING: When uninstalling, the path defaults to [INSTALLFOLDER]\data.txt -->
-                <!-- If you changed the location of data.txt via the registry, the file will be left behind! -->
-                <RemoveFile Name="data.txt" On="uninstall" />
-            </Component>
         </ComponentGroup>
     </Fragment>
 </Wix>
