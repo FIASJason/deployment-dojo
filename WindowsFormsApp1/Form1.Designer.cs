@@ -32,7 +32,8 @@
             this.lblEdition = new System.Windows.Forms.Label();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.EditionValue = new System.Windows.Forms.Label();
-            this.CustomerValue = new System.Windows.Forms.Label();
+            this.CustomerValue = new System.Windows.Forms.TextBox();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,19 +78,27 @@
             // 
             // CustomerValue
             // 
-            this.CustomerValue.AutoSize = true;
-            this.CustomerValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.CustomerValue.Location = new System.Drawing.Point(136, 178);
+            this.CustomerValue.Location = new System.Drawing.Point(140, 178);
             this.CustomerValue.Name = "CustomerValue";
-            this.CustomerValue.Size = new System.Drawing.Size(123, 20);
+            this.CustomerValue.Size = new System.Drawing.Size(211, 20);
             this.CustomerValue.TabIndex = 4;
-            this.CustomerValue.Text = "Customer Value";
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(357, 178);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.TabIndex = 5;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.Save_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CustomerValue);
             this.Controls.Add(this.EditionValue);
             this.Controls.Add(this.lblCustomer);
@@ -108,7 +117,8 @@
         private System.Windows.Forms.Label lblEdition;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.Label EditionValue;
-        private System.Windows.Forms.Label CustomerValue;
+        private System.Windows.Forms.TextBox CustomerValue;
+        private System.Windows.Forms.Button SaveButton;
     }
 }
 
