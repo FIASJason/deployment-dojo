@@ -356,6 +356,9 @@ msiexec /i belttest.msi TRANSFORMS=belttest.mst
 ## S1E34: Upgrading our Configuration with WiX v4
 
 - Working with upgrades to our Belt Test application.
+- Verifies that we can upgrade packages from a previous version.
+- Verifies that custom properties are remembered.
+- Added a launch condition to display a message and block installation if the application key is not installed and the LICENSEKEY property is not specified.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e34/upgrading-our-configuration-with-wix-v4/>
 
 ## Full episode list and where to watch
