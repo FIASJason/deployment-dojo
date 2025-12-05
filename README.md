@@ -237,9 +237,9 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 
 - Installs a Windows Service using WiX v4.
 - Service installation requires three elements:
-    - `File` to install the service executable
-    - `ServiceInstall` to define the service properties
-    - `ServiceControl` to define how the service is started and stopped during installation and uninstallation.
+  - `File` to install the service executable
+  - `ServiceInstall` to define the service properties
+  - `ServiceControl` to define how the service is started and stopped during installation and uninstallation.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e25/at-your-service---installing-windows-service-with-wix-v4/>
 
 ## S1E26: AMA - The WiX v4 RTM Celebration
@@ -262,17 +262,21 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Modifying our installed service to use a lowest-privilege account: `LocalService`.
 - We'll modify the permissions of our install folder to allow the `LocalService` account to read and write files.
 - You can use the `PermissionEx` element with the `Sddl` attribute to set folder permissions.
-    - The SDDL syntax can be exported from a directory with the desired access using one of the following commands:
-    ``` cmd
-    cacls.exe /S [Directory]
-    ```
 
-    or
+  - The SDDL syntax can be exported from a directory with the desired access using one of the following commands:
 
-    ``` powershell
-    (Get-Acl -Path "[Directory]").Sddl
-    ```
-    - This method is **not recommended** for production installers, as SDDL strings are not human-readable.
+  ```cmd
+  cacls.exe /S [Directory]
+  ```
+
+  or
+
+  ```powershell
+  (Get-Acl -Path "[Directory]").Sddl
+  ```
+
+  - This method is **not recommended** for production installers, as SDDL strings are not human-readable.
+
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e28/permission-to-come-aboard-using-the-localservice-in-wix-v4/>
 
 ## S1E29: Narrowing the Permission for our LocalService in WiX v4
@@ -313,6 +317,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
         <!-- Using the Condition so that we only set it if we found a value -->
         <SetProperty Id="DATAFOLDER" Value="[REMEMBERDATAFOLDER]" After="AppSearch" Condition="REMEMBERDATAFOLDER" />
 ```
+
 - `Condition` returns true if the property exists and has a value. If the property is `null`, then the condition is false and the action will not be performed. This allows us to use the existing value from the registry if it exists, or to use a custom value specified at install/uninstall time if the value is empty.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e32/remembering-user-configuration-using-wix-v4/>
 
@@ -324,6 +329,7 @@ Windows Sandbox generates a minimal virtual machine which can be used for testin
 - Added a new property `CUSTOMER` to store the customer name. The user can specify this value at install time, allowing for the application to be personalised.
 - Transforms (`.mst` files) are created to allow for easy deployment of custom configurations without modifying the base MSI installer.
 - Transforms can be created using the `wix msi transform` command, specifying the base MSI, the output MST file, and the properties to set:
+
 ```cmd
 # Create the transform
 wix msi transform .\original.msi .\updated.msi -out .\customers\Contoso.mst
@@ -331,6 +337,7 @@ wix msi transform .\original.msi .\updated.msi -out .\customers\Contoso.mst
 # Install the MSI using the transform
 msiexec /i .\original.msi TRANSFORMS=.\customers\Contoso.mst
 ```
+
 - The downside to this approach is that it requires the Setup team to modify the WiX elements with updated variables. It would be better if the IT team could create their own transforms without needing to modify the installer source code.
 - Instead, we'll create a new application to allow the IT team to create their own transforms.
 - We created a new console application `ITConfig` that takes command line arguments for the Customer name, and generates a transform file.
@@ -338,11 +345,18 @@ msiexec /i .\original.msi TRANSFORMS=.\customers\Contoso.mst
 - Run the command with `itconfig.exe belttest.msi 'Customer Name'`. The transform will be created with the name `belttest.mst`.
 - The IT team can now create their own transforms without needing to modify the installer source code.
 - Install the MSI using the generated transform:
+
 ```cmd
 msiexec /i belttest.msi TRANSFORMS=belttest.mst
 ```
+
 - As the Company Name/Customer can now be specified using the transform, we can make the `CUSTOMER` property private by changing it to `Customer`. This prevents the user from specifying the customer name at install time - it will be set from the `.mst` transform file.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e33/configuration-for-the-it-crowd/>
+
+## S1E34: Upgrading our Configuration with WiX v4
+
+- Working with upgrades to our Belt Test application.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e34/upgrading-our-configuration-with-wix-v4/>
 
 ## Full episode list and where to watch
 
