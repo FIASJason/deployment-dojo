@@ -8,3 +8,4 @@ obj/
 
 # Ignore .vs folders
 .vs/
+*.binlog

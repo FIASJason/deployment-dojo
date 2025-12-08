@@ -361,6 +361,17 @@ msiexec /i belttest.msi TRANSFORMS=belttest.mst
 - Added a launch condition to display a message and block installation if the application key is not installed and the LICENSEKEY property is not specified.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e34/upgrading-our-configuration-with-wix-v4/>
 
+## E35: Next Episode: A Controversial View of User Configuration
+
+- We modified the Winforms app to allow users to specify the company name. The updated name is then written to the registry using our Class Library functions.
+- Because the registry key is located in HKEY_LOCAL_MACHINE, the application needs to run with elevated privileges to write to the registry.
+- Rather than force the entire app to run as administrator, we can create a separate process that runs with elevated privileges to update the registry.
+- the application parameters were updated to accept a customer name, which is then written to the registry in a separate, elevated, process.
+- Once the registry is updated, the main application can read the updated value and display it.
+- We extract the `Customer` property from the registry during installation, and set it as a property that can be used in the installer UI. This allows the user-specified value to remain during upgrades.
+- We also added some code to the Windows Forms app which will remember the state and position of the window the last time it was closed, and open the form in the same place next time.
+- Link: <https://robmensching.com/deployment-dojo/episodes/s1/e35/a-controversial-view-of-user-configuration/>
+
 ## Full episode list and where to watch
 
 - Full Season 1 episodes: <https://robmensching.com/deployment-dojo/episodes/s1/>

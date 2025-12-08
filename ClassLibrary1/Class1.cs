@@ -52,5 +52,7 @@ namespace ClassLibrary1
         public static string GetCustomer() => (string) Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "Customer", null) ?? "Default";
 
         public static string GetEdition() => (string) Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "Edition", null) ?? "Default";
+
+        public static void SetCustomer(string customer) => Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\BeltTest", "Customer", customer);
     }
 }
