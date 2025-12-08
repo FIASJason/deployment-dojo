@@ -368,6 +368,7 @@ msiexec /i belttest.msi TRANSFORMS=belttest.mst
 - Rather than force the entire app to run as administrator, we can create a separate process that runs with elevated privileges to update the registry.
 - the application parameters were updated to accept a customer name, which is then written to the registry in a separate, elevated, process.
 - Once the registry is updated, the main application can read the updated value and display it.
+- We extract the `Customer` property from the registry during installation, and set it as a property that can be used in the installer UI. This allows the user-specified value to remain during upgrades.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e35/a-controversial-view-of-user-configuration/>
 
 ## Full episode list and where to watch
