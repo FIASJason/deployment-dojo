@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return -2;
             }
