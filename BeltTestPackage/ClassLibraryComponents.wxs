@@ -4,16 +4,23 @@
     <Fragment>
         <!-- Set a property based on an existing registry value -->
         <Property Id="REMEMBERDATAFOLDER">
-            <RegistrySearch Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFileFolder" Type="raw" />
+            <RegistrySearch Id="SearchCountFileFolder" Root="HKLM" Key="SOFTWARE\BeltTest" Name="CountFileFolder"
+                            Type="raw" />
         </Property>
-
-        <!-- Set a property for the customer name -->
-        <Property Id="CUSTOMER" Value="valued" />
-
         <!-- Set the DATAFOLDER directory to the remembered value -->
         <!-- Set after AppSearch so that REMEMBERDATAFOLDER is populated -->
         <!-- Using the Condition so that we only set it if we found a value -->
         <SetProperty Id="DATAFOLDER" Value="[REMEMBERDATAFOLDER]" After="AppSearch" Condition="REMEMBERDATAFOLDER" />
+
+        <!-- Do the same for the Customer property; if we don't set this, then the customer name will default to "valued" every upgrade -->
+        <Property Id="REMEMBERCUSTOMER">
+            <RegistrySearch Id="SearchCustomer" Root="HKLM" Key="SOFTWARE\BeltTest" Name="Customer" Type="raw" />
+        </Property>
+        <SetProperty Id="CUSTOMER" Value="[REMEMBERCUSTOMER]" After="AppSearch" Condition="REMEMBERCUSTOMER" />
+
+        <!-- Set a property for the customer name if it isn't set above. -->
+        <Property Id="CUSTOMER" Value="valued" />
+
 
         <ComponentGroup Id="ClassLibraryComponents" Directory="INSTALLFOLDER">
             <Component>
