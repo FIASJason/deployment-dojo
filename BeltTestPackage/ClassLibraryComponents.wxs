@@ -18,7 +18,7 @@
         </Property>
         <SetProperty Id="CUSTOMER" Value="[REMEMBERCUSTOMER]" After="AppSearch" Condition="REMEMBERCUSTOMER" />
 
-        <!-- Set a property for the customer name if it isn't set above. -->
+        <!-- The CUSTOMER property is set by SetProperty above if REMEMBERCUSTOMER is found; otherwise, this Property element sets the default value "valued". Only one will take effect, as WiX properties set via XML are ignored if already set. -->
         <Property Id="CUSTOMER" Value="valued" />
 
 
