@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         #region Constants
-        internal const int BCM_SETSHIELD = 5644;
+        private const int BCM_SETSHIELD = 5644;
 
         const string BoundsRegistryKey  = @"HKEY_CURRENT_USER\Software\BeltTest";
         const string BoundsRegistryName = "Form1Location";
