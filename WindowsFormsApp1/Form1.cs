@@ -57,7 +57,20 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        MessageBox.Show($"Something went wrong; Error code {process.ExitCode}");
+                        string errorMessage;
+                        switch (process.ExitCode)
+                        {
+                            case -1:
+                                errorMessage = "Invalid arguments were provided.";
+                                break;
+                            case -2:
+                                errorMessage = "An exception occurred during execution.";
+                                break;
+                            default:
+                                errorMessage = $"Something went wrong; Error code {process.ExitCode}";
+                                break;
+                        }
+                        MessageBox.Show(errorMessage);
                     }
                 }
             }
