@@ -369,6 +369,7 @@ msiexec /i belttest.msi TRANSFORMS=belttest.mst
 - the application parameters were updated to accept a customer name, which is then written to the registry in a separate, elevated, process.
 - Once the registry is updated, the main application can read the updated value and display it.
 - We extract the `Customer` property from the registry during installation, and set it as a property that can be used in the installer UI. This allows the user-specified value to remain during upgrades.
+- We also added some code to the Windows Forms app which will remember the state and position of the window the last time it was closed, and open the form in the same place next time.
 - Link: <https://robmensching.com/deployment-dojo/episodes/s1/e35/a-controversial-view-of-user-configuration/>
 
 ## Full episode list and where to watch
