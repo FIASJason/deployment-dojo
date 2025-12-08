@@ -5,7 +5,7 @@
         <!-- If the application is already installed, ignore the requirement for a license key-->
         <!-- Launch condition operates backwards -->
         <!-- will not show message if the application is Installed or LICENSEKEY is provided -->
-        <Launch Message="A license key is required to be provided on the command line" Condition="Installed OR LICENSEKEY" />
+        <!--<Launch Message="A license key is required to be provided on the command line" Condition="Installed OR LICENSEKEY" />-->
 
         <!-- Define an Icon property -->
         <Icon Id="dojo.ico" SourceFile="..\resources\deployment_dojo.ico" />
